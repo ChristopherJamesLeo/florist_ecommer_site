@@ -1,3 +1,52 @@
 *{
     box-sizing: border-box;
 }
+.navbar-brand {
+    width: 150px; 
+}
+.brand-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-toggler {
+    padding: 5px;
+    border-radius: 0;
+}
+.nav-btn-lines {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+}
+.nav-item{
+    padding: 10px 10px;
+    font-size: 18px;
+}
+ion-icon {
+    font-size: 25px;
+}
+.navbar-nav {
+    overflow-y: auto;
+}
+.nav-remark {
+    font-size: 15px;
+}
+.nav-remark-price {
+    font-weight: 500;
+}
+.header-ani {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: header-ani 0.5s linear 0s 1 ;
+    position: sticky;
+    top: 0;
+}
+
+@keyframes header-ani {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
