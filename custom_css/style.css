@@ -9,6 +9,7 @@
 }
 .header {
     width: 100%;
+    background-color: var(--primary-global-white);
     position: absolute;
     left: 0;
     top: 0;
@@ -142,3 +143,128 @@ ion-icon {
     font-weight: 300;
 }
 /* our benefits end */
+/* Item show start */
+.show-item-count-container {
+    height: 400px;
+}
+.show-item-count {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.show-item-count-1{
+    background-image: url("../assets/imgs/bgimages/categories-1.jpg.webp");
+}
+.show-item-count-2{
+    background-image: url("../assets/imgs/bgimages/categories-2.jpg.webp");
+}
+.show-item-count-3{
+    background-image: url("../assets/imgs/bgimages/categories-3.jpg.webp");
+}
+.show-item-count-4{
+    background-image: url("../assets/imgs/bgimages/categories-4.jpg.webp");
+}
+.show-item-count-content {
+    width: 100%;
+    padding: 15px 0px;
+    background-color: var(--primary-global-white);
+}
+.show-item-count-content h2 {
+
+    font-family: var(--secondary-font-family);
+    line-height: 0.5;
+}
+.show-item-count-content span {
+    font-weight: 300;
+}
+/* Item show end */
+/* About us start */
+.about-us-title{
+    padding-right: 100px;
+}
+.about-us-title h6,.content-us-container h6{
+    color: var(--primary-global-color);
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+.about-us-title h1,.content-us-container h1 {
+    font-family: var(--secondary-font-family);
+    font-size: 55px;
+}
+.about-us-content p ,.content-us-container p{
+    font-size: 20px;
+    font-weight: 300;
+}
+.about-video-container {
+
+    padding: 50px 0px;
+}
+.about-video {
+    height: 450px;
+    background-image: url("../assets/imgs/bgimages/about-video.jpg.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+.about-video a {
+
+    display: inline-block;
+    padding: 20px 25px;
+    background-color: var(--primary-global-white);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.about-video a i {
+    color: var(--primary-global-color);
+}
+.content-us-container{
+    padding: 100px 50px;
+    box-shadow: 4px 4px 30px #f4f4f4 ,-4px -4px 30px #f4f4f4;
+}
+.content-us-container a {
+    background-color: var(--primary-global-color);
+    border-radius: 50px;
+    color: var(--primary-global-white);
+}
+.content-us-container a:hover{
+    color: var(--primary-global-white);
+    background-color: var(--primary-global-color);
+}
+/* About us end */
+/* Our flower section start */
+.section-title h5 {
+    color: var(--primary-global-color);
+    letter-spacing: 3px;
+    font-size: 17px;
+}
+.section-title h1 {
+    font-size: 45px;
+    font-family: var(--secondary-font-family);
+}
+.our-flower-taps-list-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.our-flower-taps-list-group li {
+    padding: 10px 10px;
+}
+.our-flower-taps-list-group li a {
+    display: inline-block;
+    padding: 3px 8px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 300;
+}
+.our-flower-taps-list-group li a.active {
+    border: 3px solid var(--primary-global-color);
+}
+/* Our flower section end */
