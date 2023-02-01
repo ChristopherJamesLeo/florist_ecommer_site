@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 content-us-container">
                     <h6 class="text-uppercase ">SLOW FLOWERS’ FLORAL INSIGHTS</h6>
-                    <h1>Dried flowers are having a renaissance</h1>
+                    <h1>Dried flowers are having a <br> renaissance</h1>
                     <p>
                         This awareness has been stimulated by sustainable sourcing practices and the desire on the part of North American flower growers to “extend the season” beyond the last frost.
                     </p>
@@ -643,7 +643,7 @@
     <!-- cover letter section end -->
     <!-- follow us section start -->
     <section class="follow-us-section">
-        <div class=" p-3 follw-us-section-container">
+        <div class="p-3 follw-us-section-container">
             <div class="row justify-content-evenly align-items-start flex-wrap">
                 <div class="mb-3 follow-us-items-container">
                     <div class=" text-center follw-us-items-content">
@@ -785,7 +785,29 @@
                 smartSpeed:2000,
             });
         });
-        
+        $(".ourflowertaps").click(function(){
+        $tabvalue = $(this).attr("data-items");
+        // $parent = $(this).parent();
+        // console.log($parent);
+        $(this).parent().addClass("active").siblings().removeClass("active");
+        if($tabvalue === "all"){
+            // console.log($(".our-flower-item-container"))
+            $(".our-flower-item-container").show("slow").css({
+                "transform" : "scale(1)",
+                "transform-origin" : "center",
+            });
+        }else {
+            $(".our-flower-item-container").hide();
+            $(".our-flower-item-container").not("."+$tabvalue).css({
+                "transform" : "scale(0)",
+                "transform-origin" : "center",
+            });
+            $(".our-flower-item-container").filter("."+$tabvalue).show("slow").css({
+                "transform" : "scale(1)",
+                "transform-origin" : "center",
+            });
+        }
+    })
     </script>
 
 

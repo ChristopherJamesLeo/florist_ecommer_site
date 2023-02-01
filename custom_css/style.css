@@ -12,7 +12,7 @@
 .header {
     width: 100%;
     background-color: var(--primary-global-white);
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 0;
     z-index: 100;
@@ -207,7 +207,7 @@
     padding: 50px 0px;
 }
 .about-video {
-    height: 450px;
+    height: 500px;
     background-image: url("../assets/imgs/bgimages/about-video.jpg.webp");
     background-position: center;
     background-size: cover;
@@ -423,7 +423,7 @@
     border: 2px solid var(--primary-global-color);
 }
 .latest-post-body-container .latest-body-items-container {
-    height: 500px;
+    height: max-content;
     box-shadow: 5px 5px 20px #f4f4f4;
 
 }
@@ -431,7 +431,7 @@
     text-decoration: underline;
 
 }
-.latest-post-body-container .latest-body-items-container .lates-body-items-img-container {
+.latest-post-body-container .latest-body-items-container .latest-body-items-img-container {
     width: 100%;
     position: relative;
 }
@@ -642,3 +642,66 @@
 
     }
 }
+
+/* ------------------------------------- */
+/* About Page Start */
+/* page-header */
+.page-header {
+    background-image: url("../assets/imgs/bgimages/breadcrumb-bg.jpg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page-header-container .page-header-content h1 {
+    font-size: 50px;
+    font-family: var(--secondary-font-family);
+}
+.page-header-container .page-header-content span {
+    font-size: 18px;
+}
+.page-header-container .page-header-content span a{
+    text-decoration: none;
+}
+.page-header-container .page-header-content span a:nth-child(1){
+    color: var(--primary-global-color);
+    
+}
+/* about us florist services start*/
+.about-us-service-container .about-us-service-contents-box {
+    position: relative;
+    padding: 50px 40px;
+}
+.about-us-service-container .about-us-service-contents-box .about-us-benefit-icons {
+    background-color: var(--primary-global-white);
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    transform: translateX(-50%);
+}
+.about-us-service-container .about-us-service-header h4{
+    font-size: 16px;
+    color: var(--primary-global-color);
+    letter-spacing: 3px;
+}
+.about-us-service-container .about-us-service-header h1 {
+    font-family: var(--secondary-font-family);
+}
+/* about us florist services end*/
+/* about us team section start */
+.about-us-team-container .our-team-body-items-content-container h1{
+    font-family: var(--secondary-font-family);
+    font-size: 30px;
+}
+.about-us-team-container .our-team-body-items-content-container p{
+    color: var(--primary-global-color);
+    font-weight: 300;
+    font-size: 20px;
+}
+.our-team-body-items-content-container .our-team-content-link-icons a{
+    color: #cacaca;
+    font-size: 18px;
+    display: inline-block;
+    padding: 0px 10px;
+}
+/* about us team section end */

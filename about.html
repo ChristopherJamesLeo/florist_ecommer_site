@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
+
+    <!--  bootstrap 5.3 css1 js 1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nothing+You+Could+Do&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- owl carousel css2 js2 -->
+    <link rel="stylesheet" href="./assets/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./custom_css/style.css">
+</head>
+<body>
+    <header class=" header">
+        <nav class="navbar navbar-expand-lg container justify-content-between ">
+            <a href="javascript:void(0)" class="navbar-brand d-block">
+                <img src="./assets/imgs/logo_fav/logo.png.webp" class="brand-logo" alt="logo">
+            </a>
+            <button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <div class="nav-btn-lines"></div>
+                <div class="my-1 nav-btn-lines"></div>
+                <div class="nav-btn-lines"></div>
+            </button>
+            <div id="nav" class="navbar-collapse collapse justify-content-end ">
+                <ul class="navbar-nav text-uppercase ">
+                    <li class="nav-item "><a href="#" class="nav-link ">home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">about</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">pages</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">content</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            let getHeader = document.querySelector(".header");
+            window.onscroll = function(){
+                let getscrollval = window.scrollY;
+                if(getscrollval > 0) {
+                    getHeader.classList.add("header-ani");
+                }else {
+                    getHeader.classList.remove("header-ani");
+                }
+            }
+        </script>
+    </header>
+    <!-- page header section start  -->
+    <section class="page-header mb-5">
+        <div class="py-5 page-header-container">
+            <div class="text-center mx-auto page-header-content">
+                <h1>About Us</h1>
+                <span class="text-uppercase text-muted"><a href="#">home</a> &nbsp; | &nbsp; <a href="#" class="text-muted">about</a></span>
+            </div>
+        </div>
+    </section>
+    <!-- page header section end -->
+    <!-- about us section start -->
+    <section class="about-us">
+        <div class="about-us-container container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 about-us-title">
+                    <h6 class="text-uppercase">about us</h6>
+                    <h1>We provide all kinds of fresh flower services</h1>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 about-us-content">
+                    <p class="text-muted">
+                        For Heather Henson, of Boreal Blooms in Cold Lake, Alberta, Canada, growing flowers that can be dried and incorporated into late fall and winter floral arrangements has been a game-changer. During her growing season, this farmer-florist relies on a vivid palette of annuals, perennials and ornamental grasses to supply her studio.
+                    </p>
+                </div>
+
+            </div>
+            <div class="row content-container">
+                <div class="col-lg-6 col-md-12 about-video-container">
+                    <div class="about-video">
+                        <a href="javascript:void(0)"><i class="fas fa-play"></i></a>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-12  content-us-container">
+                    <h6 class="text-uppercase ">SLOW FLOWERS’ FLORAL INSIGHTS</h6>
+                    <h1>Dried flowers are having a <br> renaissance</h1>
+                    <p>
+                        This awareness has been stimulated by sustainable sourcing practices and the desire on the part of North American flower growers to “extend the season” beyond the last frost.
+                    </p>
+                    <a href="#" class="btn rounded-lg fw-bold p-2 px-3 text-uppercase">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about us section end -->
+    <!-- our benefits start -->
+    <section class="our-benefits py-5">
+        <div class="our-benefits-container about-us-service-container container pt-5">
+            <div class="d-flex justify-content-between align-items-center py-5 latest-post-heard-container ">
+                <div class="mx-auto text-center latest-post-header about-us-service-header">
+                    <h4 class="text-uppercase">OUR SERVICES</h4>
+                    <h1>Florist’s services</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="d-flex flex-column justify-content-start align-items-start  border about-us-service-contents-box">
+                        <div class="benefits-icons about-us-benefit-icons mx-auto">
+                            <img src="./assets/imgs/logo_fav/services-1.png.webp" alt="services-1.png">
+                        </div>
+                        <div class="text-center benefits">
+                            <h2 class="mb-2">100% Freshness</h2>
+                            <p>
+                                Most people are unaware of the less common flower
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="d-flex flex-column justify-content-start align-items-start  border about-us-service-contents-box">
+                        <div class="benefits-icons about-us-benefit-icons mx-auto">
+                            <img src="./assets/imgs/logo_fav/services-2.png.webp" alt="services-1.png">
+                        </div>
+                        <div class="text-center benefits">
+                            <h2 class="mb-2">Event decoration</h2>
+                            <p>
+                                Flower helps you perfectly express how important your significant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+                    <div class="d-flex flex-column justify-content-start align-items-start  border about-us-service-contents-box">
+                        <div class="benefits-icons about-us-benefit-icons mx-auto">
+                            <img src="./assets/imgs/logo_fav/services-3.png.webp" alt="services-1.png">
+                        </div>
+                        <div class="text-center benefits">
+                            <h2 class="mb-2">Green landscape</h2>
+                            <p>
+                                Flower helps you perfectly express how important your significant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our benefits end -->
+    <!-- cover letter section start -->
+    <section class="cover-letter-section">
+        <div class="cover-letter-main-container">
+            <div class="container py-5">
+                <div class=" cover-letter-carousel-container">
+                    <div class="owl-carousel ">
+                        <div class="item d-flex justify-content-center align-items-center flex-column  mx-auto cover-letter-container">
+                            <div class="text-center  cover-letter-content-container">
+                                <div class="cover-letter-content-header mx-auto">
+                                    <img src="./assets/imgs/logo_fav/quote.png.webp" alt="quote.png">
+                                </div>
+                                <div class="cover-letter-content">
+                                    <p class="text-muted">
+                                        “I just wanted to say thank you for making such gorgeous arrangements for our
+                                        birthday celebration. I couldn’t get over how perfect they were for the
+                                        party. You did a fantastic job, and I appreciate it very much”
+                                    </p>
+                                    <h4>
+                                        Alejandro Houston
+                                    </h4>
+                                    <span class="text-muted text-uppercase fw-semibold">Businessman</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item d-flex justify-content-center align-items-center flex-column  mx-auto cover-letter-container">
+                            <div class="text-center  cover-letter-content-container">
+                                <div class="cover-letter-content-header mx-auto">
+                                    <img src="./assets/imgs/logo_fav/quote.png.webp" alt="quote.png">
+                                </div>
+                                <div class="cover-letter-content">
+                                    <p class="text-muted">
+                                        “I just wanted to say thank you for making such gorgeous arrangements for our
+                                        birthday celebration. I couldn’t get over how perfect they were for the
+                                        party. You did a fantastic job, and I appreciate it very much”
+                                    </p>
+                                    <h4>
+                                        Farador Houston
+                                    </h4>
+                                    <span class="text-muted text-uppercase fw-semibold">Businessman</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item d-flex justify-content-center align-items-center flex-column  mx-auto cover-letter-container">
+                            <div class="text-center  cover-letter-content-container">
+                                <div class="cover-letter-content-header mx-auto">
+                                    <img src="./assets/imgs/logo_fav/quote.png.webp" alt="quote.png">
+                                </div>
+                                <div class="cover-letter-content">
+                                    <p class="text-muted">
+                                        “I just wanted to say thank you for making such gorgeous arrangements for our
+                                        birthday celebration. I couldn’t get over how perfect they were for the
+                                        party. You did a fantastic job, and I appreciate it very much”
+                                    </p>
+                                    <h4>
+                                        Jonthan Houston
+                                    </h4>
+                                    <span class="text-muted text-uppercase fw-semibold">Businessman</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cover letter section end -->
+    <!-- latest post section start -->
+    <section class="latest-post-section py-5">
+        <div class="container latest-post-container">
+            <div class="d-flex justify-content-between align-items-center py-5 latest-post-heard-container ">
+                <div class="latest-post-header">
+                    <h4 class="text-uppercase">OUR TEAM MEMBER</h4>
+                    <h1>Flower Experts</h1>
+                </div>
+                <div class="latest-post-btn-container">
+                    <a href="#" class="btn text-uppercase">MEET OUR TEAM</a>
+                </div>
+            </div>
+            <div class="latest-post-body-container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-3 latest-body-items-container about-us-team-container">
+                        <div class="lates-body-items-img-container">
+                            <img src="./assets/imgs/avators/team-1.jpg.webp" alt="blog 1">
+                        </div>
+                        <div class="text-center mt-3 p-3 our-team-body-items-content-container ">
+                            <h1>Richard Osborne</h1>
+                            <p class="">
+                                Manager
+                            </p>
+                            <div class="text-center our-team-content-link-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-3 latest-body-items-container about-us-team-container">
+                        <div class="lates-body-items-img-container">
+                            <img src="./assets/imgs/avators/team-2.jpg.webp" alt="blog 1">
+                        </div>
+                        <div class="text-center mt-3 p-3 our-team-body-items-content-container ">
+                            <h1>Richard Osborne</h1>
+                            <p class="">
+                                Assistance Manager
+                            </p>
+                            <div class="text-center our-team-content-link-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-3 latest-body-items-container about-us-team-container">
+                        <div class="lates-body-items-img-container">
+                            <img src="./assets/imgs/avators/team-3.jpg.webp" alt="blog 1">
+                        </div>
+                        <div class="text-center mt-3 p-3 our-team-body-items-content-container ">
+                            <h1>Richard Osborne</h1>
+                            <p class="">
+                                Senior Developer
+                            </p>
+                            <div class="text-center our-team-content-link-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-3 latest-body-items-container about-us-team-container">
+                        <div class="lates-body-items-img-container">
+                            <img src="./assets/imgs/avators/team-4.jpg.webp" alt="blog 1">
+                        </div>
+                        <div class="text-center mt-3 p-3 our-team-body-items-content-container ">
+                            <h1>Richard Osborne</h1>
+                            <p class="">
+                                Junior Developer
+                            </p>
+                            <div class="text-center our-team-content-link-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest post section end -->
+    <!-- follow us section start -->
+    <section class="follow-us-section">
+        <div class=" p-3 follw-us-section-container">
+            <div class="row justify-content-evenly align-items-start flex-wrap">
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- follow us section end -->
+    <!-- footer section start -->
+    <footer>
+        <div class="footer-section-container">
+            <div class="container">
+                <div class="row py-4 footer-header-container ">
+                    <div class="col-lg-3 col-md-3 col-sm-12 my-2 text-start">
+                        <img src="./assets/imgs/logo_fav/logo.png.webp" alt="logo">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 my-2 text-start ">
+                        <p class="text-muted">
+                            The floristry business has a significant market in the corporate and social event world, as flowers
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 my-2 text-start footer-icons-container">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="row footer-body-container">
+                    <div class="col-lg-4 col-md-6 col-sm-12 p-5 company-account-container">
+                        <div class="row">
+                            <div class="col-6 company-container">
+                                <h1>Company</h1>
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">About Us</a></li>
+                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Services</a></li>
+                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 account-container">
+                                <h1>Account</h1>
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">My cart</a></li>
+                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Wishlist</a></li>
+                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 p-5 border newletter-container">
+                        <h1>Newletter</h1>
+                        <p class="text-muted">
+                            Subcribe to our newsletter to get more free tips. No Spam, Promise.
+                        </p>
+                        <div class="py-2 input-group">
+                            <input type="email" name="subscribe" id="subscribe" class=" subscribe-input" placeholder="Email">
+                            <input type="submit" value="subscribe" class="text-uppercase subscribe-btn">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 p-5 getintouch-container">
+                        <h1>Get In Touch</h1>
+                        <p class="my-3 text-muted">
+                            69 North Cleveland Street, Memphis,USA.
+                        </p>
+                        <p class="my-3 text-muted">
+                            (123) 8111 9210 - (012) 1111 6868
+                        </p>
+                        <p class="my-3 text-muted">
+                            Florisr@supportthem.com
+                        </p>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="./assets/libs/jquery-3_6_3.js"></script>
+        
+    <!-- owl carousel js2 -->
+    <script src="./assets/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+    <!-- iconicon js 2 -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <!-- custom js -->
+    <script src="./custom_js/home.js"></script>
+    
+    <script>
+            $(document).ready(function(){
+                $(".owl-carousel").owlCarousel({
+                    autoWidth: false,
+                    items: 1,
+                    loop: true,
+                    autoplay : true,
+                    autoplayTimeout : 5000,
+                    autoplayHoverPause : true,
+                    smartSpeed:2000,
+                });
+                $("#owl-carousel").owlCarousel({
+                    autoWidth: false,
+                    items: 3,
+                    loop: true,
+                    autoplay : true,
+                    autoplayTimeout : 5000,
+                    autoplayHoverPause : true,
+                    smartSpeed:2000,
+                });
+            });
+            
+    </script>
+    
+</body>
+</html>
