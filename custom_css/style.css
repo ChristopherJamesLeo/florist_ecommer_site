@@ -705,3 +705,80 @@
     padding: 0px 10px;
 }
 /* about us team section end */
+
+/* --------------------------------- */
+/* Service Page */
+/* Our Service Section Start */
+.our-service-tap-main-container .our-service-tap-container {
+    padding: 60px 40px;
+    position: relative;
+
+    border: 1px solid #ddd;
+}
+.our-service-tap-main-container .our-service-tap-container.active {
+    border: 1px solid var(--primary-global-color);
+}
+.our-service-tap-container .our-service-tap-icon{
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-global-white);
+
+    position: absolute;
+    left: 50%;
+    top: -25%;
+
+    transform: translate(-50%,25%);
+
+}
+.our-service-tap-main-container .our-service-tap-container .our-service-tap-content h3{
+    font-family: var(--secondary-font-family);
+}
+.our-service-tap-main-container .our-service-tap-container .our-service-tap-content p {
+    font-size: 17px;
+}
+.our-service-content-container .our-service-content-head-img-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.our-service-content-container .our-service-content-head-img-container img {
+    width: 100%;
+}
+.our-service-content-container .our-service-content-head-img-container a {
+    color: var(--primary-global-color);
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.our-service-content-body-container{
+    padding-top: 40px;
+    position: relative;
+
+}
+.our-service-content-header {
+    display: inline-block;
+    background-color: var(--primary-global-white);
+    padding: 5px 10px;
+    position: absolute;
+    left: 0;
+    top: -40%;
+}
+.our-service-content-header h1{
+    font-size: 50px;
+    font-family: var(--secondary-font-family);
+}
+.our-service-content-header p {
+    color: var(--primary-global-color);
+    font-size: 18px;
+}
+.our-service-content-body-container .our-service-content-body {
+    padding-top: 40px;
+}
+.our-service-content-body-container .our-service-content-body p {
+    font-size: 17px;
+    font-weight: 300;
+
+}
+/* Our Service section End */
