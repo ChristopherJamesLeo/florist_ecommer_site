@@ -842,9 +842,6 @@
     color: var(--primary-global-white);
     background-color: #000;
 }
-.contact-us-section-container .contact-map-container{
-    /* max-height: 400px; */
-}
 .contact-us-section-container .contact-map-container iframe {
     width: 100%;
     height: 300px;
