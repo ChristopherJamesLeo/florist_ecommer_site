@@ -879,3 +879,98 @@
     height: 300px;
 }
 /* Contact Us Page End */
+
+/* Cart Section Start */
+.cart-table-section table {
+    width: 100%;
+}
+.cart-table-section table tr th {
+    font-weight: 500;
+    padding: 10px 0px;
+}
+.cart-table-section table tr th ,.cart-table-section table tr td .cart-product-container .product-name {
+    font-size: 30px;
+    font-family: var(--secondary-font-family);
+}
+.cart-table-section table thead tr,.cart-table-section table tbody tr  {
+    border-bottom: 1px solid #ddd;
+}
+.cart-table-section table tr td{
+    padding: 25px 0px;
+}
+.cart-table-section table tr td .cart-product-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.cart-table-section table tr td .cart-product-container .product-price {
+    font-weight: 700;
+    font-size: 20px;
+}
+.cart-table-section table tr td .quantity {
+    width: 70%;
+    margin: auto;
+    padding: 10px ;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+.cart-table-section table tr td .quantity:focus {
+    border: 1px solid #ddd;
+    outline: none;
+}
+.cart-table-section table tr td .product-total-column .product-total-price{
+    font-size: 20px;
+    font-weight: 700;
+}
+.cart-table-section table tr td .product-total-column a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: var(--primary-global-white);
+    background-color: var(--primary-global-color);
+    border-radius: 50%;
+}
+.cart-table-section table tfoot tr td div a i {
+    display: inline-block;
+    margin-right: 15px;
+    color: var(--primary-global-color);
+    font-size: 13px;
+}
+.apply-box-container,.cart-total-box-container {
+    background-color: #f3f3f3;
+}
+.apply-box-container .apply-box .apply-input {
+    width: 60%;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+
+}
+.apply-box-container .apply-box .apply-input:focus {
+    outline: none;
+}
+.apply-box-container .apply-box .apply-input::placeholder {
+    font-size: 15px;
+}
+.apply-box-container .apply-box button {
+    width: 39%;
+    letter-spacing: 2px;
+}
+.cart-total-box-container h3 {
+    font-family: var(--secondary-font-family);
+}
+.cart-total-box-container div {
+    font-size: 17px;
+}
+.cart-total-box-container div:nth-of-type(2) span:nth-of-type(2) {
+    color: var(--primary-global-color);
+}
+.cart-total-box-container a {
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+/* Cart Section End */
