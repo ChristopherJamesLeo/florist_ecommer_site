@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 :root {
     --primary-global-color : #f45d96;
     --primary-global-white : #fff;
     --primary-font-family : 'Quicksand', sans-serif;
-    --secondary-font-family :  'Times New Roman', Times, serif;
+    --secondary-font-family : 'Libre Baskerville', serif;
     --third-font-family : 'Nothing You Could Do', cursive;
     --fourth-font-family : 'Libre Baskerville', serif;
 }
@@ -974,3 +975,66 @@
     letter-spacing: 2px;
 }
 /* Cart Section End */
+/* Check out section start */
+.checkout-section .contact-information-container {
+    margin-bottom: 30px;
+}
+.checkout-section .contact-information-container .contact-information-header h1{
+    font-size: 27px;
+    font-family: var(--secondary-font-family);
+}
+.checkout-section .contact-information-container .contact-information-header span {
+    font-size: 19px;
+    font-family: var(--secondary-font-family);
+}
+.checkout-section .contact-information-container .contact-information-header span a {
+    color: var(--primary-global-color);
+}
+.checkout-section .contact-information-container .form-group input[type=text]{
+    font-size: 18px;
+    font-weight: 300;
+}
+.checkout-section .contact-information-container .form-group label{
+    font-size: 18px;
+    font-weight: 300;
+}
+.checkout-section .shipping-address-container .shipping-address-body form .form-group label::after{
+    content: "*";
+    color: var(--primary-global-color);
+    font-size: 15px;
+}
+.your-order-container {
+    overflow: hidden;
+}
+.your-order-container h3{
+    font-family: var(--secondary-font-family);
+    display: inline-block;
+    position: relative;
+
+    
+}
+.your-order-container h3::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    display: block;
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+
+}
+.your-order-container .checkbox-total-container div {
+    font-size: 20px;
+}
+.your-order-container form .form-group input[type=checkbox]{
+    accent-color: var(--primary-global-color) !important;
+}
+.your-order-container form .form-group label {
+    font-family: var(--primary-font-family);
+}
+.your-order-container form button {
+    letter-spacing: 3px;
+    width: 100%;
+}
+/* Check out section End */

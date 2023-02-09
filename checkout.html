@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping cart</title>
+    <title>Check out</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -76,142 +76,125 @@
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
-                <h1>Shopping cart</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./cart.html" class="text-muted">SHOPPING CART</a></span>
+                <h1>Check out</h1>
+                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./checkout.html" class="text-muted">checkout</a></span>
             </div>
         </div>
     </section>
     <!-- page header section end -->  
-    <!-- Cart table section start -->
+    <!-- Check out section start -->
     <section>
-        <div class="cart-table-section">
+        <div class="cart-table-section checkout-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 p-3">
-                        <table class="">
-                            <thead>
-                                <tr class="">
-                                    <div class="row">
-                                        <th class="col-6">Product</th>
-                                        <th class="col-3">Quantity</th>
-                                        <th class="col-3">Total</th>
-                                    </div> 
-                                </tr>
-                            </thead>
-                            
-                            <tbody>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-1.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">21</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="2">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-2.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">10</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="5">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-3.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">15</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="6">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-4.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">30</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="3">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            
-                            <tfoot>
-                                <tr>
-                                    <td colspan="3" class="">
-                                        <div class="d-flex justify-content-between align-items-center fw-semibold">
-                                            <a href="#" class="text-uppercase nav-link"><span><i class="fas fa-undo"></i></span>Continue shopping</a>
-                                            <a href="#" class="text-uppercase nav-link"><span><i class="fas fa-trash"></i></span>Clear Shopping Cart</a>
-                                            <a href="#" class="text-uppercase nav-link"><span><i class="fas fa-sync-alt"></i></span>update cart</a>
-                                        </div>
-                                        
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                        <div class="contact-information-container">
+                            <div class="d-flex justify-content-between align-items-center mb-3 contact-information-header">
+                                <h1>Contact Informaiton</h1>
+                                <span class="d-block">Already have an account? <a href="#" class="nav-link d-inline">Login</a></span>
+                            </div>
+                            <div class="form-group my-2">
+                                <input type="text" name="emailorphonr" id="form-control" class="form-control rounded-0 py-2 px-3" placeholder="Email or mobile phone number">
+                            </div>
+                            <div class="form-group my-3">
+                                <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
+                                <label for="keep">Keep me up to dateon news and exclusive offers</label>
+                            </div>
+                        </div>
+                        <div class="contact-information-container shipping-address-container">
+                            <div class="d-flex justify-content-start align-items-center mb-3 contact-information-header shipping-address-header">
+                                <h1>Shipping address</h1>
+                            </div>
+                            <div class="shipping-address-body">
+                                <form action="" method="get" enctype="multipart/form-data">
+                                    <div class="form-group mb-3">
+                                        <label for="firstname" class="mb-2">First name</label>
+                                        <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="lastname" class="mb-2">Last name</label>
+                                        <input type="text" name="lastname" id="lastname" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="contact" class="mb-2">Contact</label>
+                                        <input type="text" name="contact" id="contact" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="address" class="mb-2">Address</label>
+                                        <input type="text" name="str-address" id="str-address" class="form-control rounded-0 py-2 px-3 mb-2" placeholder="Steet Address">
+                                        <input type="text" name="apart-address" id="apart-address" class="form-control rounded-0 py-2 px-3" placeholder="Apartment,suite,unite ect (optional)">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="town" class="mb-2">Country/State</label>
+                                        <input type="text" name="town" id="town" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="postcode" class="mb-2">Postcode/Zip</label>
+                                        <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="odernote" class="mb-2">Order note</label>
+                                        <input type="text" name="odernote" id="odernote" class="form-control rounded-0 py-2 px-3" placeholder="Note about your order, e.g, special noe for delivery"> 
+                                    </div>
+                                    <div class="form-group my-3">
+                                        <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
+                                        <label for="keep">Keep me up to dateon news and exclusive offers</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                         
                     </div>
                     <div class="col-lg-4 col-md-12 p-3">
-                        <div class="p-4 apply-box-container mb-5">
-                            <p class="pb-3 text-muted">Enter coupon code. It will be applied at checkout.</p>
-                            <div class="d-flex apply-box">
-                                <input type="text" name="code" id="apply-input" class="rounded-0 apply-input" placeholder="Your code Here">
-                                <button type="submit" class="text-uppercase fw-semibold text-light bg-dark btn rounded-0">apply</button>
-                            </div>
-                        </div>
-                        <div class="p-4 cart-total-box-container">
-                            <h3 class="mb-5">Cart Total</h3>
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="text-muted">Subtotal</span>
-                                <span class="fw-bold">$<span id="cart-subtotal">0</span>.00</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                <span class="text-muted">Total</span>
-                                <span class="fw-bold">$<span id="cart-total">0</span>.00</span>
-                            </div>
-                            <a href="#" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to checkout</a>
+
+                        <div class="p-4 apply-box-container your-order-container mb-5">
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <h3 class="mb-3">Your Order</h3>
+                                <p class="pb-2 text-muted">Enter coupon code. It will be applied at checkout.</p>
+                                <div class="d-flex apply-box pb-5">
+                                    <input type="text" name="code" id="apply-input" class="rounded-0 apply-input" placeholder="Your code Here">
+                                    <button type="submit" class="text-uppercase fw-semibold text-light bg-dark btn rounded-0">apply</button>
+                                </div>
+                                <h3 class="mb-5">Cart Total</h3>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-muted"><span class="quantity">3</span>x Succulent gym</span>
+                                    <input type="hidden" name="" id="price" class="price" value="25">
+                                    <span class="fw-bold">$<span class="total-price">0</span>.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-muted"><span class="quantity">2</span>x Succulent gym</span>
+                                    <input type="hidden" name="" id="price" class="price" value="25">
+                                    <span class="fw-bold">$<span class="total-price">0</span>.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-muted"><span class="quantity">2</span>x Succulent gym</span>
+                                    <input type="hidden" name="" id="price" class="price" value="30">
+                                    <span class="fw-bold">$<span class="total-price">0</span>.00</span>
+                                </div>
+                                <hr>
+                                <div class="cart-total-box-container checkbox-total-container">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-muted">Subtotal</span>
+                                        <span class="fw-bold">$<span id="cart-subtotal">0</span>.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <span class="text-muted">Total</span>
+                                        <span class="fw-bold">$<span id="cart-total">0</span>.00</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group my-3">
+                                    <input type="checkbox" name="cheque" id="cheque" class=" me-2">
+                                    <label for="cheque">Cheque payment</label>
+                                </div>
+                                <div class="form-group my-3">
+                                    <input type="checkbox" name="paypal" id="paypal" class=" me-2">
+                                    <label for="paypal">PayPal</label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to checkout</a>
+                            </form>
+                            
                         </div>
 
                     </div>
@@ -229,8 +212,8 @@
 
             getProductPrices.forEach(function(getProductPrice,idx){
                 // console.log(getProductPrice.innerText,idx)
-                let getPrice = +getProductPrice.innerText;
-                let getQuan = getQuantitys[idx].value ;
+                let getPrice = getProductPrice.value;
+                let getQuan = +getQuantitys[idx].innerText ;
                 // console.log(getQuan)
                 // console.log(typeof getPrice)
                 let getTotal = getPrice * getQuan;
@@ -245,7 +228,45 @@
 
         </script>
     </section>
-    <!-- Cart table section end -->
+    <!-- Check Out section end -->
+    <!-- follow us section start -->
+    <section class="follow-us-section">
+        <div class="p-3 follw-us-section-container">
+            <div class="row justify-content-evenly align-items-start flex-wrap">
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- follow us section end -->
     <!-- footer section start -->
     <footer>
         <div class="footer-section-container">
