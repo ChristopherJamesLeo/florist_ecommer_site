@@ -1369,9 +1369,9 @@
 .portfolio-body-container .portfolio-item-container .porfolio-item-img {
     position: relative;
 }
-/* .portfolio-body-container .portfolio-grid {
-
-} */
+.portfolio-body-container .portfolio-grid {
+    display: flex;
+}
 .portfolio-body-container .portfolio-item-container .porfolio-item-img img {
     width: 100%;
 
