@@ -28,7 +28,7 @@
 <body>
     <header class=" header ">
         <nav class="navbar navbar-expand-lg container justify-content-between ">
-            <a href="./index.html" class="navbar-brand d-block">
+            <a href="./index.php" class="navbar-brand d-block">
                 <img src="./assets/imgs/logo_fav/logo.png.webp" class="brand-logo" alt="logo">
             </a>
             <button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -38,22 +38,22 @@
             </button>
             <div id="nav" class="navbar-collapse collapse justify-content-end ">
                 <ul class="navbar-nav text-uppercase ">
-                    <li class="nav-item "><a href="./index.html" class="nav-link ">home</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link ">about</a></li>
-                    <li class="nav-item"><a href="./service.html" class="nav-link">services</a></li>
-                    <li class="nav-item"><a href="./shop.html" class="nav-link">shop</a></li>
-                    <li class="nav-item"><a href="./cart.html" class="nav-link active">pages</a>
+                    <li class="nav-item "><a href="./index.php" class="nav-link ">home</a></li>
+                    <li class="nav-item"><a href="./about.php" class="nav-link ">about</a></li>
+                    <li class="nav-item"><a href="./service.php" class="nav-link">services</a></li>
+                    <li class="nav-item"><a href="./shop.php" class="nav-link">shop</a></li>
+                    <li class="nav-item"><a href="./cart.php" class="nav-link active">pages</a>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="./cart.html">Cart</a></li>
-                            <li class="list-group-item"><a href="./checkout.html">Checkout</a></li>
+                            <li class="list-group-item"><a href="./cart.php">Cart</a></li>
+                            <li class="list-group-item"><a href="./checkout.php">Checkout</a></li>
                             <li class="list-group-item"><a href="#">Wishlist</a></li>
-                            <li class="list-group-item"><a href="./portfolio.html">Portfolio</a></li>
-                            <li class="list-group-item"><a href="./product_detail.html">Shop Details</a></li>
-                            <li class="list-group-item"><a href="./blog_detail.html">Blog Details</a></li>
+                            <li class="list-group-item"><a href="./portfolio.php">Portfolio</a></li>
+                            <li class="list-group-item"><a href="./product_detail.php">Shop Details</a></li>
+                            <li class="list-group-item"><a href="./blog_detail.php">Blog Details</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link ">blog</a></li>
-                    <li class="nav-item"><a href="./contactus.html" class="nav-link">contact</a></li>
+                    <li class="nav-item"><a href="./blog.php" class="nav-link ">blog</a></li>
+                    <li class="nav-item"><a href="./contactus.php" class="nav-link">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
@@ -77,7 +77,7 @@
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
                 <h1>Check out</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./checkout.html" class="text-muted">checkout</a></span>
+                <span class="text-uppercase text-muted"><a href="./index.php">home</a> &nbsp; | &nbsp; <a href="./checkout.php" class="text-muted">checkout</a></span>
             </div>
         </div>
     </section>

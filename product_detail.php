@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Folrist Site</title>
+    <title>Product detail</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -28,7 +28,7 @@
 <body>
     <header class=" header ">
         <nav class="navbar navbar-expand-lg container justify-content-between ">
-            <a href="./index.html" class="navbar-brand d-block">
+            <a href="./index.php" class="navbar-brand d-block">
                 <img src="./assets/imgs/logo_fav/logo.png.webp" class="brand-logo" alt="logo">
             </a>
             <button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -38,22 +38,22 @@
             </button>
             <div id="nav" class="navbar-collapse collapse justify-content-end ">
                 <ul class="navbar-nav text-uppercase ">
-                    <li class="nav-item "><a href="./index.html" class="nav-link active">home</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link ">about</a></li>
-                    <li class="nav-item"><a href="./service.html" class="nav-link">services</a></li>
-                    <li class="nav-item"><a href="./shop.html" class="nav-link">shop</a></li>
-                    <li class="nav-item"><a href="./cart.html" class="nav-link">pages</a>
+                    <li class="nav-item "><a href="./index.php" class="nav-link ">home</a></li>
+                    <li class="nav-item"><a href="./about.php" class="nav-link ">about</a></li>
+                    <li class="nav-item"><a href="./service.php" class="nav-link">services</a></li>
+                    <li class="nav-item"><a href="./shop.php" class="nav-link">shop</a></li>
+                    <li class="nav-item"><a href="./cart.php" class="nav-link active">pages</a>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="./cart.html">Cart</a></li>
-                            <li class="list-group-item"><a href="./checkout.html">Checkout</a></li>
+                            <li class="list-group-item"><a href="./cart.php">Cart</a></li>
+                            <li class="list-group-item"><a href="./checkout.php">Checkout</a></li>
                             <li class="list-group-item"><a href="#">Wishlist</a></li>
-                            <li class="list-group-item"><a href="./portfolio.html">Portfolio</a></li>
-                            <li class="list-group-item"><a href="./product_detail.html">Shop Details</a></li>
-                            <li class="list-group-item"><a href="./blog_detail.html">Blog Details</a></li>
+                            <li class="list-group-item"><a href="./portfolio.php">Portfolio</a></li>
+                            <li class="list-group-item"><a href="./product_detail.php">Shop Details</a></li>
+                            <li class="list-group-item"><a href="./blog_detail.php">Blog Details</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link">blog</a></li>
-                    <li class="nav-item"><a href="./contactus.html" class="nav-link">contact</a></li>
+                    <li class="nav-item"><a href="./blog.php" class="nav-link ">blog</a></li>
+                    <li class="nav-item"><a href="./contactus.php" class="nav-link ">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
@@ -72,198 +72,164 @@
             }
         </script>
     </header>
-    <!-- banner carousel start -->
-    <section class="banner-carousel-section">
-        <div class="banner-carousel-container">
-            <div class="owl-carousel owl-theme owl-loaded banner-carousel">
-                <div class="owl-stage-outer">
-                    <div class="owl-stage">
-                        <div class="owl-item owl-item1">
-                            <div class="owl-item-container container d-flex justify-content-start align-items-center">
-                                <div class="row ">
-                                    <div class="col-lg-5 col-md-8 col-sm-12">
-                                        <h3 class="font-uppercase fw-semibold">Fresh flower & gift shop</h3>
-                                        <h1>Making beautiful flowers a part of your life.</h1>
-                                        <a href="#" class="btn rounded-lg fw-bold p-2 px-3">Shop Now</a>
+    <!-- page header section start  -->
+    <section class="page-header mb-5">
+        <div class="py-5 page-header-container">
+            <div class="text-center mx-auto page-header-content">
+                <h1>Product detail</h1>
+                <span class="text-uppercase text-muted"><a href="./index.php">home</a> &nbsp; | &nbsp; <a href="./checkout.php" class="text-muted">Product detail</a></span>
+            </div>
+        </div>
+    </section>
+    <!-- page header section end -->  
+    <!-- Product Detail section start -->
+    <section>
+        <div class="product-detail-section-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 p-2">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-12 main-product-img-container">
+                                <img src="./assets/imgs/products/product-details-1.jpg.webp" id="main-product-img" class="main-product-img" alt="product-details-1">
+                            </div>
+                            <div class="col-lg-3 col-md-12 slide-product-img-container">
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-1.jpg.webp" show-img="0" alt="thumb-1">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-2.jpg.webp" show-img="1" alt="thumb-2">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-3.jpg.webp" show-img="2" alt="thumb-3">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-4.jpg.webp" show-img="3" alt="thumb-4">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-5.jpg.webp" show-img="4" alt="thumb-5">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-6.jpg.webp" show-img="5" alt="thumb-6">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            let getMainImg = document.getElementById("main-product-img");
+                            let getSlideImgs = document.querySelectorAll(".slide-product-img img");
+                            let productImgs = ["product-details-2.jpg.webp","product-details-3.jpg.webp","product-details-4.jpg.webp","product-details-5.jpg.webp","product-details-6.jpg.webp","product-details-1.jpg.webp"];
+
+                            getSlideImgs.forEach(function(getSlideImg){
+                                getSlideImg.addEventListener("click",function(){
+                                    // console.log(this.getAttribute("show-img"));
+                                    getMainImg.src = `./assets/imgs/products/`+ productImgs[this.getAttribute("show-img")];
+                                })
+                            })
+                        </script>
+                    </div>
+                    <div class="col-lg-6 col-md-12 p-2 product-detail-form-container">
+                        <form action="" method="get" enctype="multipart/form-data">
+                            <div class="mb-5 form-header">
+                                <div class="d-flex justify-content-between align-items-center product-detail-form-header">
+                                    <div class="product-detail-header">
+                                        <span class="text-uppercase">Succulent</span><br>
+                                        <h1>Fly Me To The Moon</h1>
+                                    </div>
+                                    <div class="product-detail-price">
+                                        <span>$34.00</span>
                                     </div>
                                 </div>
-                            </div>   
-                        </div>
-                        <div class="owl-item owl-item2">
-                            <div class="owl-item-container container d-flex justify-content-start align-items-center">
-                                <div class="row ">
-                                    <div class="col-lg-5 col-md-8 col-sm-12">
-                                        <h3 class="font-uppercase fw-semibold">Fresh flower & gift shop</h3>
-                                        <h1>Making beautiful flowers a part of your life.</h1>
-                                        <a href="#" class="btn rounded-lg fw-bold p-2 px-3">Shop Now</a>
+                                <div class="d-flex align-items-center product-rating-container ">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="text-center px-2 review-count">
+                                        <span>03 reviews</span>
+                                    </div>
+                                    <div class="write-review">
+                                        <span>Write a review</span>
                                     </div>
                                 </div>
-                            </div> 
-                        </div>
-                    </div>
+                            </div>
+                            <div class="form-head-categories">
+                                <span class="text-muted">Categories: </span><span>Succlent</span><br>
+                                <span class="text-muted">Product code: </span><span>PM 101</span><br>
+                                <span class="text-muted">Reward points: </span><span>30</span><br>
+                                <span class="text-muted">Availability: </span><span>In Stock</span><br>
+                            </div>
+                            <hr class="my-4">
+                            <div class="product-control">
+                                <input type="number" name="p-quantity" id="p-quantity" class="p-quantity" value="2">
+                                <a href="#" class="text-uppercase text-light bg-dark nav-link addcart">Add to cart</a>
+                                <a href="#" class="addwishlist"><i class="fas fa-heart"></i></a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="product-detail-show-container">
+                                <div class="mb-3 product-detail-tab">
+                                    <span id="description" class="detail-tabs active" show-detail = "0">Description</span> / <span id="shipping-return" class="detail-tabs " show-detail = "1">Shipping & Returns</span> / <span id="review" class="detail-tabs " show-detail = "2">Reviews ( 03 )</span>
+                                </div>
+                                <div class="product-detail-para-container">
+                                    <div class="show-para description">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque numquam cumque dicta, qui ab harum voluptas quos expedita ipsum praesentium culpa perferendis ipsam hic maxime, accusamus, minus odio et?
+                                        </p>
+                                    </div>
+                                    <div class="show-para shipping-return">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque numquam
+                                        </p>
+                                    </div>
+                                    <div class="show-para reviews">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque numquam cumque dicta, qui ab harum voluptas quos expedita ipsum praesentium culpa perferendis ipsam hic maxime, accusamus, minus odio et? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non facilis ea odio rerum? Sed voluptatum nulla voluptates blanditiis consequatur cum, dolore, qui cupiditate quasi esse exercitationem beatae, voluptate non ipsum.
+                                        </p>
+                                    </div>
 
-                </div>
-                <!-- <div class="owl-dots container">
-                    <div class="owl-dot active"><span></span></div>
-                    <div class="owl-dot"><span></span></div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-    <!-- banner carousel end -->
-    <!-- our benefits start -->
-    <section class="our-benefits">
-        <div class="our-benefits-container container pt-5">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="d-flex justify-content-start align-items-start px-1 py-3">
-                        <div class="benefits-icons me-3">
-                            <img src="./assets/imgs/logo_fav/benefit-1.png.webp" alt="benefit-1">
-                        </div>
-                        <div class="benefits">
-                            <h2 class="mb-2">100% Freshness</h2>
-                            <p>
-                                Most people are unaware of the less common flower
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="d-flex justify-content-start align-items-start px-1 py-3">
-                        <div class="benefits-icons me-3">
-                            <img src="./assets/imgs/logo_fav/benefit-2.png.webp" alt="benefit-2">
-                        </div>
-                        <div class="benefits">
-                            <h2 class="mb-2">Made by artist</h2>
-                            <p>
-                                Most people are unaware of the less common flower
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="d-flex justify-content-start align-items-start px-1 py-3">
-                        <div class="benefits-icons me-3">
-                            <img src="./assets/imgs/logo_fav/benefit-3.png.webp" alt="benefit-3">
-                        </div>
-                        <div class="benefits">
-                            <h2 class="mb-2">Own courier</h2>
-                            <p>
-                                Most people are unaware of the less common flower
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="d-flex justify-content-start align-items-start px-1 py-3">
-                        <div class="benefits-icons me-3">
-                            <img src="./assets/imgs/logo_fav/benefit-4.png.webp" alt="benefit-4">
-                        </div>
-                        <div class="benefits">
-                            <h2 class="mb-2">100% Freshness</h2>
-                            <p>
-                                Most people are unaware of the less common flower
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- our benefits end -->
-    <!-- Item show start -->
-    <section class="item-show">
-        <div class="item-show-container container mb-5">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12 px-2 mb-2 show-item-count-container">
-                    <div class="p-3 d-flex justify-content-center align-items-end show-item-count show-item-count-1">
-                        <div class=" text-center show-item-count-content ">
-                            <h2>Fresh Flower</h2>
-                            <span>( 25 items )</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 px-2 mb-2 show-item-count-container">
-                    <div class="p-3 d-flex justify-content-center align-items-end show-item-count show-item-count-2">
-                        <div class=" text-center show-item-count-content">
-                            <h2>Succulent plants</h2>
-                            <span>( 162 items )</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 px-2 mb-2 show-item-count-container">
-                    <div class="p-3 d-flex justify-content-center align-items-end show-item-count show-item-count-3">
-                        <div class=" text-center show-item-count-content">
-                            <h2>Cactus plants</h2>
-                            <span>( 58 items )</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 px-2 mb-2 show-item-count-container">
-                    <div class="p-3 d-flex justify-content-center align-items-end show-item-count show-item-count-4">
-                        <div class=" text-center show-item-count-content">
-                            <h2>Funiture tree</h2>
-                            <span>( 25 items )</span>
-                        </div>
-                    </div>
-                </div>                                                
-            </div>
-        </div>
-    </section>
-    <!-- item show end -->
-    <!-- about us section start -->
-    <section class="about-us">
-        <div class="about-us-container container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12 col-sm-12 about-us-title">
-                    <h6 class="text-uppercase">about us</h6>
-                    <h1>We provide all kinds of fresh flower services</h1>
-                </div>
-                <div class="col-lg-7 col-md-12 col-sm-12 about-us-content">
-                    <p class="text-muted">
-                        For Heather Henson, of Boreal Blooms in Cold Lake, Alberta, Canada, growing flowers that can be dried and incorporated into late fall and winter floral arrangements has been a game-changer. During her growing season, this farmer-florist relies on a vivid palette of annuals, perennials and ornamental grasses to supply her studio.
-                    </p>
-                </div>
 
-            </div>
-            <div class="row content-container">
-                <div class="col-lg-6 col-md-12 about-video-container">
-                    <div class="about-video">
-                        <a href="javascript:void(0)"><i class="fas fa-play"></i></a>
-                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                let getDetailTabs = document.querySelectorAll(".detail-tabs")
+                                let getShowParas = document.querySelectorAll(".show-para");
+                                showidx = 0;
 
+                                getDetailTabs.forEach(function(getDetailTab,idx){
+                                    getDetailTab.addEventListener("click",function(){
+                                        getDetailTabs.forEach((item,idx)=>{getDetailTabs[idx].classList.remove("active")});
+                                        this.classList.add("active");
+                                        // console.log(this.getAttribute("show-detail"))
+                                        showPara(showidx = this.getAttribute("show-detail"));
+
+                                    })
+                                })
+                                function showPara(idx){
+                                    getShowParas.forEach((getShowPara)=>{getShowPara.style.display="none"})
+                                    getShowParas[idx].style.display= "block";
+                                }
+                                showPara(showidx);
+                            </script>
+                            
+
+
+                        </form>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-12 content-us-container">
-                    <h6 class="text-uppercase ">SLOW FLOWERS’ FLORAL INSIGHTS</h6>
-                    <h1>Dried flowers are having a <br> renaissance</h1>
-                    <p>
-                        This awareness has been stimulated by sustainable sourcing practices and the desire on the part of North American flower growers to “extend the season” beyond the last frost.
-                    </p>
-                    <a href="#" class="btn rounded-lg fw-bold p-2 px-3 text-uppercase">Contact Us</a>
-                </div>
+                <hr class="my-4">
             </div>
         </div>
     </section>
-    <!-- about us section end -->
-    <!-- our flower section start -->
+    <!-- Product Detail Section End -->
+    <!-- Relative Product Section Start -->
     <section class="our-flower py-5">
         <div class="our-flower-container container">
             <!-- title start -->
-            <div class="text-center section-title ">
-                <h5 class="text-uppercase">our flower</h5>
-                <h1>New Arrivals</h1>
+            <div class="text-center mb-4 section-title ">
+                <h1>Related products</h1>
             </div>
             <!-- title end -->
-            <div class="our-flower-taps-container" >
-                <ul class="d-flex flex-wrap justify-content-center align-items-center our-flower-taps-list-group">
-                    <li class="active"><a href="javascript:void(0)" id="all" class="ourflowertaps" data-items = "all">All</a></li>
-                    <li><a href="javascript:void(0)" id="bouquet" class="ourflowertaps" data-items = "bouquet">Bouquet</a></li>
-                    <li><a href="javascript:void(0)" id="flowerbox" class="ourflowertaps" data-items = "flowerbox">Flower Box</a></li>
-                    <li><a href="javascript:void(0)" id="flowershelf" class="ourflowertaps" data-items = "flowershelf">Flower Shelf</a></li>
-                    <li><a href="javascript:void(0)" id="basketflower" class="ourflowertaps" data-items = "basketflower">Basket Of Flower</a></li>
-                    <li><a href="javascript:void(0)" id="gift" class="ourflowertaps" data-items = "giftcombos">Gift Combos</a></li>
-                </ul>
-            </div>
             <div class="our-flower-item-show-main-container">
                 <div class="our-flower-item-show-container">
                     <div class="row">
@@ -493,163 +459,7 @@
             </div>
         </div>
     </section>
-    <!-- our flower section end -->
-    <!-- View all product section start -->
-    <section class="view-all-product-section">
-        <div class="view-all-product-container">
-            <!-- view all title start -->
-            <div class="d-flex justify-content-center view-all-title-container">
-                <h4 class="text-uppercase view-all-title">view all products</h4>
-            </div>
-            <!-- view all title end -->
-            <div class="view-all-product-body-container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-8 col-sm-12 view-all-body">
-                            <h5 class="text-uppercase">customer flower</h5>
-                            <h1>Let our flowers make your party more perfect.</h1>
-                            <div class="view-all-btn-container">
-                                <a href="#" class="text-uppercase btn">Order now</a>
-                                <a href="#" class="text-uppercase btn">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!-- View all product section End -->
-    <!-- latest post section start -->
-    <section class="latest-post-section py-5">
-        <div class="container latest-post-container">
-            <div class="d-flex justify-content-between align-items-center py-5 latest-post-heard-container ">
-                <div class="latest-post-header">
-                    <h4 class="text-uppercase">latest posts</h4>
-                    <h1>Florist Tricks</h1>
-                </div>
-                <div class="latest-post-btn-container">
-                    <a href="#" class="btn text-uppercase">view all posts</a>
-                </div>
-            </div>
-            <div class="latest-post-body-container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-1.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Red Rose - Flower of love of Greek Mythology</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-2.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Red Rose - Flower of love of Greek Mythology</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-3.jpg.webp" alt="blog 3">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">DIY & CRAFTS</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Beautiful Mandalas Made From Flowers by Kathy Klein</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Latest post section end -->
-    <!-- cover letter section start -->
-    <section class="cover-letter-section">
-        <div class="cover-letter-main-container">
-            <div class="container py-5">
-                <div class=" cover-letter-carousel-container">
-                    <div class="owl-carousel ">
-                        <div class="item d-flex justify-content-center align-items-center flex-column  mx-auto cover-letter-container">
-                            <div class="text-center  cover-letter-content-container">
-                                <div class="cover-letter-content-header mx-auto">
-                                    <img src="./assets/imgs/logo_fav/quote.png.webp" alt="quote.png">
-                                </div>
-                                <div class="cover-letter-content">
-                                    <p class="text-muted">
-                                        “I just wanted to say thank you for making such gorgeous arrangements for our
-                                        birthday celebration. I couldn’t get over how perfect they were for the
-                                        party. You did a fantastic job, and I appreciate it very much”
-                                    </p>
-                                    <h4>
-                                        Alejandro Houston
-                                    </h4>
-                                    <span class="text-muted text-uppercase fw-semibold">Businessman</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item d-flex justify-content-center align-items-center flex-column  mx-auto cover-letter-container">
-                            <div class="text-center  cover-letter-content-container">
-                                <div class="cover-letter-content-header mx-auto">
-                                    <img src="./assets/imgs/logo_fav/quote.png.webp" alt="quote.png">
-                                </div>
-                                <div class="cover-letter-content">
-                                    <p class="text-muted">
-                                        “I just wanted to say thank you for making such gorgeous arrangements for our
-                                        birthday celebration. I couldn’t get over how perfect they were for the
-                                        party. You did a fantastic job, and I appreciate it very much”
-                                    </p>
-                                    <h4>
-                                        Farador Houston
-                                    </h4>
-                                    <span class="text-muted text-uppercase fw-semibold">Businessman</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item d-flex justify-content-center align-items-center flex-column  mx-auto cover-letter-container">
-                            <div class="text-center  cover-letter-content-container">
-                                <div class="cover-letter-content-header mx-auto">
-                                    <img src="./assets/imgs/logo_fav/quote.png.webp" alt="quote.png">
-                                </div>
-                                <div class="cover-letter-content">
-                                    <p class="text-muted">
-                                        “I just wanted to say thank you for making such gorgeous arrangements for our
-                                        birthday celebration. I couldn’t get over how perfect they were for the
-                                        party. You did a fantastic job, and I appreciate it very much”
-                                    </p>
-                                    <h4>
-                                        Jonthan Houston
-                                    </h4>
-                                    <span class="text-muted text-uppercase fw-semibold">Businessman</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- cover letter section end -->
+    <!-- Relative Product Sectio End -->
     <!-- follow us section start -->
     <section class="follow-us-section">
         <div class="p-3 follw-us-section-container">
@@ -762,65 +572,23 @@
 
     <!-- jquery -->
     <script src="./assets/libs/jquery-3_6_3.js"></script>
-    
+        
     <!-- owl carousel js2 -->
     <script src="./assets/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-
+    
     <!-- iconicon js 2 -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    
     <!-- custom js -->
     <script src="./custom_js/home.js"></script>
-
+    
     <script>
         $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                autoWidth: false,
-                items: 1,
-                loop: true,
-                autoplay : true,
-                autoplayTimeout : 8000,
-                autoplayHoverPause : true,
-                smartSpeed:2000,
-            });
-            $("#owl-carousel").owlCarousel({
-                autoWidth: false,
-                items: 3,
-                loop: true,
-                autoplay : true,
-                autoplayTimeout : 8000,
-                autoplayHoverPause : true,
-                smartSpeed:2000,
-            });
+
+
         });
-        $(".ourflowertaps").click(function(){
-        $tabvalue = $(this).attr("data-items");
-        // $parent = $(this).parent();
-        // console.log($parent);
-        $(this).parent().addClass("active").siblings().removeClass("active");
-        if($tabvalue === "all"){
-            // console.log($(".our-flower-item-container"))
-            $(".our-flower-item-container").show("slow").css({
-                "transform" : "scale(1)",
-                "transform-origin" : "center",
-            });
-        }else {
-            $(".our-flower-item-container").hide();
-            $(".our-flower-item-container").not("."+$tabvalue).css({
-                "transform" : "scale(0)",
-                "transform-origin" : "center",
-            });
-            $(".our-flower-item-container").filter("."+$tabvalue).show("slow").css({
-                "transform" : "scale(1)",
-                "transform-origin" : "center",
-            });
-        }
-    })
     </script>
-
-
-
+    
 </body>
-
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Contact us</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -28,7 +28,7 @@
 <body>
     <header class=" header ">
         <nav class="navbar navbar-expand-lg container justify-content-between ">
-            <a href="./index.html" class="navbar-brand d-block">
+            <a href="./index.php" class="navbar-brand d-block">
                 <img src="./assets/imgs/logo_fav/logo.png.webp" class="brand-logo" alt="logo">
             </a>
             <button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -38,22 +38,22 @@
             </button>
             <div id="nav" class="navbar-collapse collapse justify-content-end ">
                 <ul class="navbar-nav text-uppercase ">
-                    <li class="nav-item "><a href="./index.html" class="nav-link ">home</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link ">about</a></li>
-                    <li class="nav-item"><a href="./service.html" class="nav-link">services</a></li>
-                    <li class="nav-item"><a href="./shop.html" class="nav-link">shop</a></li>
-                    <li class="nav-item"><a href="./cart.html" class="nav-link active">pages</a>
+                    <li class="nav-item "><a href="./index.php" class="nav-link ">home</a></li>
+                    <li class="nav-item"><a href="./about.php" class="nav-link ">about</a></li>
+                    <li class="nav-item"><a href="./service.php" class="nav-link">services</a></li>
+                    <li class="nav-item"><a href="./shop.php" class="nav-link">shop</a></li>
+                    <li class="nav-item"><a href="./cart.php" class="nav-link ">pages</a>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="./cart.html">Cart</a></li>
-                            <li class="list-group-item"><a href="./checkout.html">Checkout</a></li>
+                            <li class="list-group-item"><a href="./cart.php">Cart</a></li>
+                            <li class="list-group-item"><a href="./checkout.php">Checkout</a></li>
                             <li class="list-group-item"><a href="#">Wishlist</a></li>
-                            <li class="list-group-item"><a href="./portfolio.html">Portfolio</a></li>
-                            <li class="list-group-item"><a href="./product_detail.html">Shop Details</a></li>
-                            <li class="list-group-item"><a href="./blog_detail.html">Blog Details</a></li>
+                            <li class="list-group-item"><a href="./portfolio.php">Portfolio</a></li>
+                            <li class="list-group-item"><a href="./product_detail.php">Shop Details</a></li>
+                            <li class="list-group-item"><a href="./blog_detail.php">Blog Details</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link ">blog</a></li>
-                    <li class="nav-item"><a href="./contactus.html" class="nav-link ">contact</a></li>
+                    <li class="nav-item"><a href="./blog.php" class="nav-link ">blog</a></li>
+                    <li class="nav-item"><a href="./contactus.php" class="nav-link active">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
@@ -76,121 +76,54 @@
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
-                <h1>Portfolio</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./cart.html" class="text-muted">Portfolio</a></span>
+                <h1>Contact us</h1>
+                <span class="text-uppercase text-muted"><a href="./index.php">home</a> &nbsp; | &nbsp; <a href="./contactus.php" class="text-muted">Contact</a></span>
             </div>
         </div>
     </section>
-    <!-- page header section end -->  
-    <!-- Portfolio body start -->
-    <section>
-        <div class="portfolio-body-container">
+    <!-- page header section end -->
+    <!-- contact us boxs section start -->
+    <section class="contact-us-section">
+        <div class="contact-us-section-container">
             <div class="container">
-                <div class="row portfolio-grid">
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-1.jpg.webp" alt="portfolio-1.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3">
+                        <div class="contact-get-in-touch-container">
+                            <h1>Get in touch</h1>
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed et dolore.
+                            </p>
+                            <div class="get-in-touch-icons-container">
+                                <i class="fas fa-map-marker-alt"></i><span class="text-muted">  69 North Cleveland Street, Memphis,USA.</span>
+                            </div>
+                            <div class="get-in-touch-icons-container">
+                                <i class="fas fa-phone"></i><span class="text-muted"> (123) 8111 9210 - (012) 1111 6868</span>
+                            </div>
+                            <div class="get-in-touch-icons-container">
+                                <i class="fas fa-envelope"></i><span class="text-muted"> Florisr@supportthem.com</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-2.jpg.webp" alt="portfolio-2.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3">
+                        <div class="contact-us-box-container">
+                            <h1>Contact Us</h1>
+                            <form action="" method="get">
+                                <input type="email" name="email" id="conact-email" class="border rounded-0 mb-3  contact-email" placeholder="Email">
+                                <textarea name="contact-message" id="contact-message" class="border rounded-0 mb-3" placeholder="Message"></textarea>
+                                <button type="submit" class="text-uppercase fw-bold">send</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-3.jpg.webp" alt="portfolio-3.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-4.jpg.webp" alt="portfolio-5.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-5.jpg.webp" alt="portfolio-5.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-6.jpg.webp" alt="portfolio-6.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-7.jpg.webp" alt="portfolio-7.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-8.jpg.webp" alt="portfolio-8.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
-                        <div class="portfolio-item-container">
-                            <div class="porfolio-item-img">
-                                <img src="./assets/imgs/portfolio/portfolio-9.jpg.webp" alt="portfolio-9.jpg">
-                                <div class=" text-center portfolio-items-content">
-                                    <h4 class="d-block">Flower Day</h4>
-                                    <span>Decoration</span>
-                                </div>
-                            </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 p-3 mb-3">
+                        <div class="contact-map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d98232.87060378442!2d-86.383658!3d39.699713!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf143adebffd88c!2sFriendship%20Gardens%20Park!5e0!3m2!1sen!2sbd!4v1675350980885!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Portfolio body End -->
+    <!-- contact us boxs section end -->
     <!-- follow us section start -->
     <section class="follow-us-section">
         <div class="p-3 follw-us-section-container">
@@ -228,7 +161,7 @@
             </div>
         </div>
     </section>
-    <!-- follow us section end -->
+    <!-- follow us section end -->    
     <!-- footer section start -->
     <footer>
         <div class="footer-section-container">
