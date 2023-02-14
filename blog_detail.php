@@ -54,23 +54,13 @@
                     </li>
                     <li class="nav-item"><a href="./blog.php" class="nav-link active">blog</a></li>
                     <li class="nav-item"><a href="./contactus.php" class="nav-link">contact</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                    <li class="nav-item"><li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
-        <script>
-            let getHeader = document.querySelector(".header");
-            window.onscroll = function(){
-                let getscrollval = window.scrollY;
-                if(getscrollval > 0) {
-                    getHeader.classList.add("header-ani");
-                }else {
-                    getHeader.classList.remove("header-ani");
-                }
-            }
-        </script>
+
     </header>
     <!-- blog detail banner start -->
     <section>
@@ -532,14 +522,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
+    <script src="./custom_js/blog_detail.js"></script>
     
-    <script>
-        $(document).ready(function(){
-
-
-        });
-    </script>
     
 </body>
 </html>

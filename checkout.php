@@ -54,23 +54,12 @@
                     </li>
                     <li class="nav-item"><a href="./blog.php" class="nav-link ">blog</a></li>
                     <li class="nav-item"><a href="./contactus.php" class="nav-link">contact</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
+                    <li class="nav-item"><a href="javascrpt:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                    <li class="nav-item"><li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
-        <script>
-            let getHeader = document.querySelector(".header");
-            window.onscroll = function(){
-                let getscrollval = window.scrollY;
-                if(getscrollval > 0) {
-                    getHeader.classList.add("header-ani");
-                }else {
-                    getHeader.classList.remove("header-ani");
-                }
-            }
-        </script>
     </header>
     <!-- page header section start  -->
     <section class="page-header mb-5">
@@ -91,7 +80,7 @@
                         <div class="contact-information-container">
                             <div class="d-flex justify-content-between align-items-center mb-3 contact-information-header">
                                 <h1>Contact Informaiton</h1>
-                                <span class="d-block">Already have an account? <a href="#" class="nav-link d-inline">Login</a></span>
+                                <span class="d-block">Already have an account? <a href="./logIn.php" class="nav-link d-inline">Login</a></span>
                             </div>
                             <div class="form-group my-2">
                                 <input type="text" name="emailorphonr" id="form-control" class="form-control rounded-0 py-2 px-3" placeholder="Email or mobile phone number">
@@ -156,21 +145,15 @@
                                     <button type="submit" class="text-uppercase fw-semibold text-light bg-dark btn rounded-0">apply</button>
                                 </div>
                                 <h3 class="mb-5">Cart Total</h3>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="text-muted"><span class="quantity">3</span>x Succulent gym</span>
-                                    <input type="hidden" name="" id="price" class="price" value="25">
-                                    <span class="fw-bold">$<span class="total-price">0</span>.00</span>
+                                <div id="cart-list-container">
+                                    <!-- <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-muted"><span class="quantity">3</span>x Succulent gym</span>
+                                        <input type="hidden" name="" id="price" class="price" value="25">
+                                        <span class="fw-bold">$<span class="total-price">0</span>.00</span>
+                                    </div> -->
+
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="text-muted"><span class="quantity">2</span>x Succulent gym</span>
-                                    <input type="hidden" name="" id="price" class="price" value="25">
-                                    <span class="fw-bold">$<span class="total-price">0</span>.00</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="text-muted"><span class="quantity">2</span>x Succulent gym</span>
-                                    <input type="hidden" name="" id="price" class="price" value="30">
-                                    <span class="fw-bold">$<span class="total-price">0</span>.00</span>
-                                </div>
+                                
                                 <hr>
                                 <div class="cart-total-box-container checkbox-total-container">
                                     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -192,7 +175,7 @@
                                     <label for="paypal">PayPal</label>
                                 </div>
                                 
-                                <button type="submit" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to checkout</a>
+                                <button type="submit" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to Order</a>
                             </form>
                             
                         </div>
@@ -201,32 +184,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            let getProductPrices = document.querySelectorAll(".price");
-            let getQuantitys = document.querySelectorAll(".quantity");
-            let getTotalPrices = document.querySelectorAll(".total-price");
-            let getcartsubtotal = document.querySelector("#cart-subtotal");
-            let getcarttotal = document.querySelector("#cart-total");
 
-            var getCartTotalvalue = 0
-
-            getProductPrices.forEach(function(getProductPrice,idx){
-                // console.log(getProductPrice.innerText,idx)
-                let getPrice = getProductPrice.value;
-                let getQuan = +getQuantitys[idx].innerText ;
-                // console.log(getQuan)
-                // console.log(typeof getPrice)
-                let getTotal = getPrice * getQuan;
-                getTotalPrices[idx].innerText = getTotal;
-                // console.log(getTotal)
-                getCartTotalvalue += getTotal;
-                
-            })
-            // console.log(getCartTotal);
-            getcartsubtotal.innerText = getCartTotalvalue;
-            getcarttotal.innerText = getCartTotalvalue;
-
-        </script>
     </section>
     <!-- Check Out section end -->
     <!-- follow us section start -->
@@ -350,14 +308,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
-    
-    <script>
-        $(document).ready(function(){
-
-
-        });
-    </script>
+    <script src="./custom_js/checkout.js"></script>
     
 </body>
 </html>

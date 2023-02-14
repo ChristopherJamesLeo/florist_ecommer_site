@@ -56,21 +56,11 @@
                     <li class="nav-item"><a href="./contactus.php" class="nav-link ">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                    <li class="nav-item"><li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
-        <script>
-            let getHeader = document.querySelector(".header");
-            window.onscroll = function(){
-                let getscrollval = window.scrollY;
-                if(getscrollval > 0) {
-                    getHeader.classList.add("header-ani");
-                }else {
-                    getHeader.classList.remove("header-ani");
-                }
-            }
-        </script>
+
     </header>
     <!-- page header section start  -->
     <section class="page-header mb-5">
@@ -226,27 +216,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            let getTaps = document.querySelectorAll(".our-service-tap-container");
-            let getTapTitles = document.querySelectorAll(".our-service-tap-content h3");
-            
-            let getserviceTitles = document.querySelector(".our-service-content-header h1");
-            
-            getTaps.forEach(function(getTap){
-                // console.log(getTap);
-                getTap.addEventListener("click",function(){
-                    getserviceTitles.innerText = "";
-                    getTaps.forEach(function(clrActive){
-                        clrActive.classList.remove("active");
-                    })
-                    this.classList.add("active");
-                    // console.log(this.getAttribute("data-servece-show"));
-                    // console.log(getTapTitles[this.getAttribute("data-servece-show")].innerText);
-                    getserviceTitles.innerText = getTapTitles[this.getAttribute("data-servece-show")].innerText;
-                })
-            })
 
-        </script>
     </section>
     <!-- services main section end -->
     <!-- footer section start -->
@@ -332,31 +302,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
+    <script src="./custom_js/service.js"></script>
     
-    <script>
-            $(document).ready(function(){
-                $(".owl-carousel").owlCarousel({
-                    autoWidth: false,
-                    items: 1,
-                    loop: true,
-                    autoplay : true,
-                    autoplayTimeout : 5000,
-                    autoplayHoverPause : true,
-                    smartSpeed:2000,
-                });
-                $("#owl-carousel").owlCarousel({
-                    autoWidth: false,
-                    items: 3,
-                    loop: true,
-                    autoplay : true,
-                    autoplayTimeout : 5000,
-                    autoplayHoverPause : true,
-                    smartSpeed:2000,
-                });
-            });
-            
-    </script>
-    
+
 </body>
 </html>

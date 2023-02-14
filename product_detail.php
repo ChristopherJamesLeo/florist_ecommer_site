@@ -56,21 +56,11 @@
                     <li class="nav-item"><a href="./contactus.php" class="nav-link ">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                    <li class="nav-item"><li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
-        <script>
-            let getHeader = document.querySelector(".header");
-            window.onscroll = function(){
-                let getscrollval = window.scrollY;
-                if(getscrollval > 0) {
-                    getHeader.classList.add("header-ani");
-                }else {
-                    getHeader.classList.remove("header-ani");
-                }
-            }
-        </script>
+
     </header>
     <!-- page header section start  -->
     <section class="page-header mb-5">
@@ -191,26 +181,7 @@
 
                                 </div>
                             </div>
-                            <script>
-                                let getDetailTabs = document.querySelectorAll(".detail-tabs")
-                                let getShowParas = document.querySelectorAll(".show-para");
-                                showidx = 0;
 
-                                getDetailTabs.forEach(function(getDetailTab,idx){
-                                    getDetailTab.addEventListener("click",function(){
-                                        getDetailTabs.forEach((item,idx)=>{getDetailTabs[idx].classList.remove("active")});
-                                        this.classList.add("active");
-                                        // console.log(this.getAttribute("show-detail"))
-                                        showPara(showidx = this.getAttribute("show-detail"));
-
-                                    })
-                                })
-                                function showPara(idx){
-                                    getShowParas.forEach((getShowPara)=>{getShowPara.style.display="none"})
-                                    getShowParas[idx].style.display= "block";
-                                }
-                                showPara(showidx);
-                            </script>
                             
 
 
@@ -249,10 +220,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div> 
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowerbox">
@@ -271,10 +242,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container bouquet">
@@ -293,10 +264,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container bouquet">
@@ -315,10 +286,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowerbox">
@@ -337,10 +308,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container giftcombos">
@@ -359,10 +330,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container basketflower">
@@ -381,10 +352,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container giftcombos">
@@ -403,10 +374,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowershelf">
@@ -425,10 +396,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>   
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowershelf">
@@ -447,10 +418,10 @@
                                 <h3 class="item-name">
                                     Fly Me To The Moon
                                 </h3>
-                                <h6 id="item-price" class="item-price">
-                                    $230.00
+                                <h6 class="item-price">
+                                    <span>$</span><span class="price">230</span><span>.00</span>
                                 </h6>
-                                <a href="#" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
+                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div>                                                                                                                                                                                                                                                                                                                                                     
                     </div>
@@ -581,14 +552,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
+    <script src="./custom_js/product_detail.js"></script>
     
-    <script>
-        $(document).ready(function(){
-
-
-        });
-    </script>
     
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Register</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="./custom_css/style.css">
 </head>
 <body>
-    <header class=" header ">
+    <!-- <header class=" header ">
         <nav class="navbar navbar-expand-lg container justify-content-between ">
-            <a href="./index.php" class="navbar-brand d-block">
+            <a href="./index.html" class="navbar-brand d-block">
                 <img src="./assets/imgs/logo_fav/logo.png.webp" class="brand-logo" alt="logo">
             </a>
             <button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -38,156 +38,122 @@
             </button>
             <div id="nav" class="navbar-collapse collapse justify-content-end ">
                 <ul class="navbar-nav text-uppercase ">
-                    <li class="nav-item "><a href="./index.php" class="nav-link ">home</a></li>
-                    <li class="nav-item"><a href="./about.php" class="nav-link ">about</a></li>
-                    <li class="nav-item"><a href="./service.php" class="nav-link">services</a></li>
-                    <li class="nav-item"><a href="./shop.php" class="nav-link">shop</a></li>
-                    <li class="nav-item"><a href="./cart.php" class="nav-link active">pages</a>
+                    <li class="nav-item "><a href="./index.html" class="nav-link ">home</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link ">about</a></li>
+                    <li class="nav-item"><a href="./service.html" class="nav-link">services</a></li>
+                    <li class="nav-item"><a href="./shop.html" class="nav-link">shop</a></li>
+                    <li class="nav-item"><a href="./cart.html" class="nav-link active">pages</a>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="./cart.php">Cart</a></li>
-                            <li class="list-group-item"><a href="./checkout.php">Checkout</a></li>
+                            <li class="list-group-item"><a href="./cart.html">Cart</a></li>
+                            <li class="list-group-item"><a href="./checkout.html">Checkout</a></li>
                             <li class="list-group-item"><a href="#">Wishlist</a></li>
-                            <li class="list-group-item"><a href="./portfolio.php">Portfolio</a></li>
-                            <li class="list-group-item"><a href="./product_detail.php">Shop Details</a></li>
-                            <li class="list-group-item"><a href="./blog_detail.php">Blog Details</a></li>
+                            <li class="list-group-item"><a href="./portfolio.html">Portfolio</a></li>
+                            <li class="list-group-item"><a href="./product_detail.html">Shop Details</a></li>
+                            <li class="list-group-item"><a href="./blog_detail.html">Blog Details</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="./blog.php" class="nav-link ">blog</a></li>
-                    <li class="nav-item"><a href="./contactus.php" class="nav-link ">contact</a></li>
+                    <li class="nav-item"><a href="./blog.html" class="nav-link ">blog</a></li>
+                    <li class="nav-item"><a href="./contactus.html" class="nav-link ">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
                 </ul>
             </div>
         </nav>
-
-    </header>
+        <script>
+            let getHeader = document.querySelector(".header");
+            window.onscroll = function(){
+                let getscrollval = window.scrollY;
+                if(getscrollval > 0) {
+                    getHeader.classList.add("header-ani");
+                }else {
+                    getHeader.classList.remove("header-ani");
+                }
+            }
+        </script>
+    </header> -->
     <!-- page header section start  -->
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
-                <h1>Portfolio</h1>
-                <span class="text-uppercase text-muted"><a href="./index.php">home</a> &nbsp; | &nbsp; <a href="./cart.php" class="text-muted">Portfolio</a></span>
+                <h1>Register</h1>
+                <span class="text-uppercase text-muted"><a href="./index.php">home</a> &nbsp; | &nbsp; <a href="./register.php" class="text-muted">Register</a></span>
             </div>
         </div>
     </section>
-    <!-- page header section end -->  
-    <!-- Portfolio body start -->
+    <!-- page header section end -->
+    <!-- log in section start -->
     <section>
-        <div class="portfolio-body-container">
+        <div class="login-section-container">
             <div class="container">
-                <div class="row portfolio-grid">
-                    <div class="col-lg-4">
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-1.jpg.webp" alt="portfolio-1.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 mx-auto log-in-form-container">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <h3 class="mb-3">Register / <a href="./logIn.php">Log In</a></h3>
+                            <div class="row">
+                                <div class="form-group mb-4  col-lg-6">
+                                    <label for="firstname" class="mb-2">First name</label>
+                                    <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4 col-lg-6">
+                                    <label for="lastname" class="mb-2">Last name</label>
+                                    <input type="text" name="lastname" id="lastname" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="email" class="mb-2">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password" class="mb-2">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password" class="mb-2">Role</label>
+                                    
+                                    <select name="role" id="role"  class="form-select-input rounded-0 ms-5 py-2 px-5">
+                                        <option value="0">User</option>
+                                        <option value="1">Admin</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="phonenumber" class="mb-2">Phone Number</label>
+                                    <input type="text" name="phonenumber" id="phonenumber" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="city" class="mb-2">City</label>
+                                    <input type="text" name="city" id="city" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="address" class="mb-2">Address</label>
+                                    <input type="text" name="str-address" id="str-address" class="form-control rounded-0 py-2 px-3 mb-3" placeholder="Steet Address">
+                                    <input type="text" name="apart-address" id="apart-address" class="form-control rounded-0 py-2 px-3" placeholder="Apartment,suite,unite ect (optional)">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="country" class="mb-2">Country/State</label>
+                                    <input type="text" name="country" id="country" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="postcode" class="mb-2">Postcode/Zip</label>
+                                    <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3">
                                 </div>
                             </div>
-                        </div>
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-2.jpg.webp" alt="portfolio-2.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
+                            
+                            
+                            <div class="form-group">
+                                <div class="d-grid">
+                                    <input type="submit" value="Register" class="text-uppercase btn rounded-0 fw-bold">
                                 </div>
+                                
                             </div>
-                        </div>
-                        <div class=" py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-3.jpg.webp" alt="portfolio-3.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </form>
+                        
                     </div>
-                    <div class="col-lg-4 px-2">
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-4.jpg.webp" alt="portfolio-5.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-5.jpg.webp" alt="portfolio-5.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-6.jpg.webp" alt="portfolio-6.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-2">
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-7.jpg.webp" alt="portfolio-7.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-8.jpg.webp" alt="portfolio-8.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-2">
-                            <div class="portfolio-item-container">
-                                <div class="porfolio-item-img">
-                                    <img src="./assets/imgs/portfolio/portfolio-9.jpg.webp" alt="portfolio-9.jpg">
-                                    <div class=" text-center portfolio-items-content">
-                                        <h4 class="d-block">Flower Day</h4>
-                                        <span>Decoration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
+                
             </div>
         </div>
     </section>
-    <!-- Portfolio body End -->
+    <!-- log in section end -->
     <!-- follow us section start -->
     <section class="follow-us-section">
         <div class="p-3 follw-us-section-container">
@@ -225,7 +191,7 @@
             </div>
         </div>
     </section>
-    <!-- follow us section end -->
+    <!-- follow us section end -->    
     <!-- footer section start -->
     <footer>
         <div class="footer-section-container">
@@ -309,8 +275,9 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/portfolio.js"></script>
+
     
+
     
 </body>
 </html>

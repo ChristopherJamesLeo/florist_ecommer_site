@@ -54,30 +54,19 @@
                     </li>
                     <li class="nav-item"><a href="./blog.php" class="nav-link">blog</a></li>
                     <li class="nav-item"><a href="./contactus.php" class="nav-link">contact</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                    <li class="nav-item"><li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
-        <script>
-            let getHeader = document.querySelector(".header");
-            window.onscroll = function(){
-                let getscrollval = window.scrollY;
-                if(getscrollval > 0) {
-                    getHeader.classList.add("header-ani");
-                }else {
-                    getHeader.classList.remove("header-ani");
-                }
-            }
-        </script>
     </header>
     <!-- page header section start  -->
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
                 <h1>About Us</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="#" class="text-muted">about</a></span>
+                <span class="text-uppercase text-muted"><a href="./index.php">home</a> &nbsp; | &nbsp; <a href="./about.php" class="text-muted">about</a></span>
             </div>
         </div>
     </section>
@@ -443,31 +432,9 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
+    <script src="./custom_js/about.js"></script>
     
-    <script>
-            $(document).ready(function(){
-                $(".owl-carousel").owlCarousel({
-                    autoWidth: false,
-                    items: 1,
-                    loop: true,
-                    autoplay : true,
-                    autoplayTimeout : 5000,
-                    autoplayHoverPause : true,
-                    smartSpeed:2000,
-                });
-                $("#owl-carousel").owlCarousel({
-                    autoWidth: false,
-                    items: 3,
-                    loop: true,
-                    autoplay : true,
-                    autoplayTimeout : 5000,
-                    autoplayHoverPause : true,
-                    smartSpeed:2000,
-                });
-            });
-            
-    </script>
+
     
 </body>
 </html>

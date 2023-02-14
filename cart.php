@@ -55,22 +55,11 @@
                     <li class="nav-item"><a href="./blog.php" class="nav-link ">blog</a></li>
                     <li class="nav-item"><a href="./contactus.php" class="nav-link">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
+                    <li class="nav-item"><li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
-        <script>
-            let getHeader = document.querySelector(".header");
-            window.onscroll = function(){
-                let getscrollval = window.scrollY;
-                if(getscrollval > 0) {
-                    getHeader.classList.add("header-ani");
-                }else {
-                    getHeader.classList.remove("header-ani");
-                }
-            }
-        </script>
     </header>
     <!-- page header section start  -->
     <section class="page-header mb-5">
@@ -99,99 +88,21 @@
                                 </tr>
                             </thead>
                             
-                            <tbody>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-1.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">21</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="2">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-2.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">10</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="5">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-3.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">15</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="6">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>
-                                        <div class=" d-flex justify-content-start align-items-center cart-product-container">
-                                            <img src="./assets/imgs/products/product-4.jpg.webp" class="d-block me-2" alt="" class="cart-product-img">
-                                            <div>
-                                                <span class="product-name">Cactus Gym</span><br><span class="product-price">$<span class="price">30</span>.00</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <input type="number" name="quantity" id="quantity" class="quantity" value="3">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center product-total-column">
-                                            <div class="product-total-price">$<span class="total-price">11</span>.00</div>
-                                            <div><a href="#"><i class="fas fa-times"></i></a></div>
-                                        </div>
-                                    </td>
-                                </tr>
+                            <tbody id="cart-body">
                             </tbody>
-                            
                             <tfoot>
                                 <tr>
                                     <td colspan="3" class="">
                                         <div class="d-flex justify-content-between align-items-center fw-semibold">
-                                            <a href="#" class="text-uppercase nav-link"><span><i class="fas fa-undo"></i></span>Continue shopping</a>
-                                            <a href="#" class="text-uppercase nav-link"><span><i class="fas fa-trash"></i></span>Clear Shopping Cart</a>
-                                            <a href="#" class="text-uppercase nav-link"><span><i class="fas fa-sync-alt"></i></span>update cart</a>
+                                            <a href="./shop.php" class="text-uppercase nav-link"><span><i class="fas fa-undo"></i></span>Continue shopping</a>
+                                            <a href="javascript:void(0)" id="clear-cart" class="text-uppercase nav-link"><span><i class="fas fa-trash"></i></span>Clear Shopping Cart</a>
+                                            <a href="./cart.php" class="text-uppercase nav-link"><span><i class="fas fa-sync-alt"></i></span>update cart</a>
                                         </div>
                                         
                                     </td>
                                 </tr>
                             </tfoot>
                         </table>
-                        
                     </div>
                     <div class="col-lg-4 col-md-12 p-3">
                         <div class="p-4 apply-box-container mb-5">
@@ -203,47 +114,25 @@
                         </div>
                         <div class="p-4 cart-total-box-container">
                             <h3 class="mb-5">Cart Total</h3>
+                            <div id="cart-list">
+                            </div>
+                            
+                            <hr>
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <span class="text-muted">Subtotal</span>
-                                <span class="fw-bold">$<span id="cart-subtotal">0</span>.00</span>
+                                <span class="fw-bold cart-subtotal">$<span id="cart-subtotal">0</span>.00</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <span class="text-muted">Total</span>
                                 <span class="fw-bold">$<span id="cart-total">0</span>.00</span>
                             </div>
-                            <a href="#" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to checkout</a>
+                            <a href="./checkout.php" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to checkout</a>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            let getProductPrices = document.querySelectorAll(".price");
-            let getQuantitys = document.querySelectorAll(".quantity");
-            let getTotalPrices = document.querySelectorAll(".total-price");
-            let getcartsubtotal = document.querySelector("#cart-subtotal");
-            let getcarttotal = document.querySelector("#cart-total");
-
-            var getCartTotalvalue = 0
-
-            getProductPrices.forEach(function(getProductPrice,idx){
-                // console.log(getProductPrice.innerText,idx)
-                let getPrice = +getProductPrice.innerText;
-                let getQuan = getQuantitys[idx].value ;
-                // console.log(getQuan)
-                // console.log(typeof getPrice)
-                let getTotal = getPrice * getQuan;
-                getTotalPrices[idx].innerText = getTotal;
-                // console.log(getTotal)
-                getCartTotalvalue += getTotal;
-                
-            })
-            // console.log(getCartTotal);
-            getcartsubtotal.innerText = getCartTotalvalue;
-            getcarttotal.innerText = getCartTotalvalue;
-
-        </script>
     </section>
     <!-- Cart table section end -->
     <!-- footer section start -->
@@ -329,14 +218,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
+    <script src="./custom_js/cart.js"></script>
     
-    <script>
-        $(document).ready(function(){
-
-
-        });
-    </script>
     
 </body>
 </html>

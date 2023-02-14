@@ -1,0 +1,81 @@
+
+CREATE TABLE IF NOT EXISTS users(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL ,
+    lastname VARCHAR(255) NOT NULL,
+    role INT NOT NULL DEFAULT "1",
+    JoinDate TIMESTAMP DEFAULT NOW(),
+    upload_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    email VARCHAR(255) NOT NULL DEFAULT "Enter Your Email",
+    password VARCHAR(255) NOT NULL ,
+    phonenumber VARCHAR(255) NOT NULL DEFAULT "Enter Your Phone Number",
+    user_img MEDIUMBLOB NOT NULL DEFAULT "team-1.jpg.webp",
+    city VARCHAR(200) NOT NULL DEFAULT "Enter Your City",
+    country VARCHAR(200) NOT NULL DEFAULT "Enter Your Country",
+    address1 VARCHAR(255) NOT NULL DEFAULT "Enter Your address 1",
+    address2 VARCHAR(255) NOT NULL DEFAULT "Enter Your address 2",
+    postcode CHAR(200) NOT NULL DEFAULT "Enter Your postcode"
+);
+
+CREATE TABLE IF NOT EXISTS products (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    categories CHAR(200),
+    rating INT NOT NULL,
+    product_img1 BLOB NOT NULL ,
+    product_img2 BLOB NOT NULL,
+    description MEDIUMTEXT
+);
+
+CREATE TABLE IF NOT EXISTS reviews (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    p_id INT NOT NULL ,
+    user_id INT NOT NULL,
+    reviews MEDIUMTEXT NOT NULL DEFAULT "Enter Your Review",
+    JOD TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    upload_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS comments (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    p_id INT NOT NULL,
+    user_id INT NOT NULL,
+    comments MEDIUMTEXT NOT NULL DEFAULT "Enter Your Comment",
+    JOD TIME DEFAULT NOW(),
+    upload_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    p_id INT NOT NULL,
+    user_id INT NOT NULL,
+    user_name VARCHAR(255) NOT NULL,
+    create_at TIMESTAMP DEFAULT NOW(),
+    amount INT NOT NULL DEFAULT "1",
+    ordernote MEDIUMTEXT,
+    p_name VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    categories CHAR(200),
+    rating INT NOT NULL,
+    product_img1 BLOB NOT NULL ,
+    product_img2 BLOB NOT NULL,
+    description MEDIUMTEXT
+);
+
+
+CREATE TABLE IF NOT EXISTS blogs (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL DEFAULT "Your Name",
+    email VARCHAR(255) NOT NULL DEFAULT "Your Email",
+    create_at DATETIME NOT NULL DEFAULT NOW(),
+    upload_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    comments MEDIUMTEXT 
+);
+
+CREATE TABLE IF NOT EXISTS contacts (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255),
+    message TEXT
+);
+
