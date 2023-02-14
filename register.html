@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check out</title>
+    <title>Register</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./custom_css/style.css">
 </head>
 <body>
-    <header class=" header ">
+    <!-- <header class=" header ">
         <nav class="navbar navbar-expand-lg container justify-content-between ">
             <a href="./index.html" class="navbar-brand d-block">
                 <img src="./assets/imgs/logo_fav/logo.png.webp" class="brand-logo" alt="logo">
@@ -53,7 +53,7 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a href="./blog.html" class="nav-link ">blog</a></li>
-                    <li class="nav-item"><a href="./contactus.html" class="nav-link">contact</a></li>
+                    <li class="nav-item"><a href="./contactus.html" class="nav-link ">contact</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
@@ -71,171 +71,89 @@
                 }
             }
         </script>
-    </header>
+    </header> -->
     <!-- page header section start  -->
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
-                <h1>Check out</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./checkout.html" class="text-muted">checkout</a></span>
+                <h1>Register</h1>
+                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./logIn.html" class="text-muted">Register</a></span>
             </div>
         </div>
     </section>
-    <!-- page header section end -->  
-    <!-- Check out section start -->
+    <!-- page header section end -->
+    <!-- log in section start -->
     <section>
-        <div class="cart-table-section checkout-section">
+        <div class="login-section-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-12 p-3">
-                        <div class="contact-information-container">
-                            <div class="d-flex justify-content-between align-items-center mb-3 contact-information-header">
-                                <h1>Contact Informaiton</h1>
-                                <span class="d-block">Already have an account? <a href="./logIn.html" class="nav-link d-inline">Login</a></span>
+                    <div class="col-lg-8 col-md-12 mx-auto log-in-form-container">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <h3 class="mb-3">Register / <a href="./logIn.html">Log In</a></h3>
+                            <div class="row">
+                                <div class="form-group mb-4  col-lg-6">
+                                    <label for="firstname" class="mb-2">First name</label>
+                                    <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4 col-lg-6">
+                                    <label for="lastname" class="mb-2">Last name</label>
+                                    <input type="text" name="lastname" id="lastname" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="email" class="mb-2">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password" class="mb-2">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password" class="mb-2">Role</label>
+                                    
+                                    <select name="role" id="role"  class="form-select-input rounded-0 ms-5 py-2 px-5">
+                                        <option value="0">User</option>
+                                        <option value="1">Admin</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="phonenumber" class="mb-2">Phone Number</label>
+                                    <input type="text" name="phonenumber" id="phonenumber" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="city" class="mb-2">City</label>
+                                    <input type="text" name="city" id="city" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="address" class="mb-2">Address</label>
+                                    <input type="text" name="str-address" id="str-address" class="form-control rounded-0 py-2 px-3 mb-3" placeholder="Steet Address">
+                                    <input type="text" name="apart-address" id="apart-address" class="form-control rounded-0 py-2 px-3" placeholder="Apartment,suite,unite ect (optional)">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="country" class="mb-2">Country/State</label>
+                                    <input type="text" name="country" id="country" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="postcode" class="mb-2">Postcode/Zip</label>
+                                    <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3">
+                                </div>
                             </div>
-                            <div class="form-group my-2">
-                                <input type="text" name="emailorphonr" id="form-control" class="form-control rounded-0 py-2 px-3" placeholder="Email or mobile phone number">
+                            
+                            
+                            <div class="form-group">
+                                <div class="d-grid">
+                                    <input type="submit" value="Register" class="text-uppercase btn rounded-0 fw-bold">
+                                </div>
+                                
                             </div>
-                            <div class="form-group my-3">
-                                <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
-                                <label for="keep">Keep me up to dateon news and exclusive offers</label>
-                            </div>
-                        </div>
-                        <div class="contact-information-container shipping-address-container">
-                            <div class="d-flex justify-content-start align-items-center mb-3 contact-information-header shipping-address-header">
-                                <h1>Shipping address</h1>
-                            </div>
-                            <div class="shipping-address-body">
-                                <form action="" method="get" enctype="multipart/form-data">
-                                    <div class="form-group mb-3">
-                                        <label for="firstname" class="mb-2">First name</label>
-                                        <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="lastname" class="mb-2">Last name</label>
-                                        <input type="text" name="lastname" id="lastname" class="form-control rounded-0 py-2 px-3">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="contact" class="mb-2">Contact</label>
-                                        <input type="text" name="contact" id="contact" class="form-control rounded-0 py-2 px-3">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="address" class="mb-2">Address</label>
-                                        <input type="text" name="str-address" id="str-address" class="form-control rounded-0 py-2 px-3 mb-2" placeholder="Steet Address">
-                                        <input type="text" name="apart-address" id="apart-address" class="form-control rounded-0 py-2 px-3" placeholder="Apartment,suite,unite ect (optional)">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="town" class="mb-2">Country/State</label>
-                                        <input type="text" name="town" id="town" class="form-control rounded-0 py-2 px-3">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="postcode" class="mb-2">Postcode/Zip</label>
-                                        <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="odernote" class="mb-2">Order note</label>
-                                        <input type="text" name="odernote" id="odernote" class="form-control rounded-0 py-2 px-3" placeholder="Note about your order, e.g, special noe for delivery"> 
-                                    </div>
-                                    <div class="form-group my-3">
-                                        <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
-                                        <label for="keep">Keep me up to dateon news and exclusive offers</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                        </form>
                         
                     </div>
-                    <div class="col-lg-4 col-md-12 p-3">
-
-                        <div class="p-4 apply-box-container your-order-container mb-5">
-                            <form action="" method="post" enctype="multipart/form-data">
-                                <h3 class="mb-3">Your Order</h3>
-                                <p class="pb-2 text-muted">Enter coupon code. It will be applied at checkout.</p>
-                                <div class="d-flex apply-box pb-5">
-                                    <input type="text" name="code" id="apply-input" class="rounded-0 apply-input" placeholder="Your code Here">
-                                    <button type="submit" class="text-uppercase fw-semibold text-light bg-dark btn rounded-0">apply</button>
-                                </div>
-                                <h3 class="mb-5">Cart Total</h3>
-                                <div id="cart-list-container">
-                                    <!-- <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <span class="text-muted"><span class="quantity">3</span>x Succulent gym</span>
-                                        <input type="hidden" name="" id="price" class="price" value="25">
-                                        <span class="fw-bold">$<span class="total-price">0</span>.00</span>
-                                    </div> -->
-
-                                </div>
-                                
-                                <hr>
-                                <div class="cart-total-box-container checkbox-total-container">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <span class="text-muted">Subtotal</span>
-                                        <span class="fw-bold">$<span id="cart-subtotal">0</span>.00</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
-                                        <span class="text-muted">Total</span>
-                                        <span class="fw-bold">$<span id="cart-total">0</span>.00</span>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="form-group my-3">
-                                    <input type="checkbox" name="cheque" id="cheque" class=" me-2">
-                                    <label for="cheque">Cheque payment</label>
-                                </div>
-                                <div class="form-group my-3">
-                                    <input type="checkbox" name="paypal" id="paypal" class=" me-2">
-                                    <label for="paypal">PayPal</label>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to Order</a>
-                            </form>
-                            
-                        </div>
-
-                    </div>
                 </div>
+                
             </div>
         </div>
-        <script>
-            let getCarts = JSON.parse(localStorage.getItem("carts"));
-            let cartListContainer = document.getElementById("cart-list-container");
-
-            getCarts.forEach(function(getCart,idx){
-                let getCartlist = `
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <span class="text-muted"><span class="quantity">${getCart.quantity}</span>x ${getCart.name}</span>
-                                        <input type="hidden" name="" id="price" class="price" value="${getCart.price}">
-                                        <span class="fw-bold">$<span class="total-price">${getCart.price}</span>.00</span>
-                                    </div>`;
-                cartListContainer.innerHTML += getCartlist;
-            })
-
-            let getProductPrices = document.querySelectorAll(".price");
-            let getQuantitys = document.querySelectorAll(".quantity");
-            let getTotalPrices = document.querySelectorAll(".total-price");
-            let getcartsubtotal = document.querySelector("#cart-subtotal");
-            let getcarttotal = document.querySelector("#cart-total");
-
-            var getCartTotalvalue = 0
-
-            getProductPrices.forEach(function(getProductPrice,idx){
-                // console.log(getProductPrice.innerText,idx)
-                let getPrice = getProductPrice.value;
-                let getQuan = +getQuantitys[idx].innerText ;
-                // console.log(getQuan)
-                // console.log(typeof getPrice)
-                let getTotal = getPrice * getQuan;
-                getTotalPrices[idx].innerText = getTotal;
-                // console.log(getTotal)
-                getCartTotalvalue += getTotal;
-                
-            })
-            // console.log(getCartTotal);
-            getcartsubtotal.innerText = getCartTotalvalue;
-            getcarttotal.innerText = getCartTotalvalue;
-
-        </script>
     </section>
-    <!-- Check Out section end -->
+    <!-- log in section end -->
     <!-- follow us section start -->
     <section class="follow-us-section">
         <div class="p-3 follw-us-section-container">
@@ -273,7 +191,7 @@
             </div>
         </div>
     </section>
-    <!-- follow us section end -->
+    <!-- follow us section end -->    
     <!-- footer section start -->
     <footer>
         <div class="footer-section-container">
