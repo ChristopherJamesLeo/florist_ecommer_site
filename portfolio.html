@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our blog</title>
+    <title>Portfolio</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -42,7 +42,7 @@
                     <li class="nav-item"><a href="./about.html" class="nav-link ">about</a></li>
                     <li class="nav-item"><a href="./service.html" class="nav-link">services</a></li>
                     <li class="nav-item"><a href="./shop.html" class="nav-link">shop</a></li>
-                    <li class="nav-item"><a href="./cart.html" class="nav-link">pages</a>
+                    <li class="nav-item"><a href="./cart.html" class="nav-link active">pages</a>
                         <ul class="list-group">
                             <li class="list-group-item"><a href="./cart.html">Cart</a></li>
                             <li class="list-group-item"><a href="./checkout.html">Checkout</a></li>
@@ -52,179 +52,142 @@
                             <li class="list-group-item"><a href="./blog_detail.html">Blog Details</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link active">blog</a></li>
-                    <li class="nav-item"><a href="./contactus.html" class="nav-link">contact</a></li>
-                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
+                    <li class="nav-item"><a href="./blog.html" class="nav-link ">blog</a></li>
+                    <li class="nav-item"><a href="./contactus.html" class="nav-link ">contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
                     <li class="nav-item"><li class="nav-item"><a href="./cart.html" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
+
     </header>
     <!-- page header section start  -->
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
-                <h1>Our blog</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="#" class="text-muted">blog</a></span>
+                <h1>Portfolio</h1>
+                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./cart.html" class="text-muted">Portfolio</a></span>
             </div>
         </div>
     </section>
-    <!-- page header section end -->
-    <!-- blog section start -->
-    <section class="latest-post-section py-5">
-        <div class="container latest-post-container">
-            <!-- <div class="d-flex justify-content-between align-items-center py-5 latest-post-heard-container ">
-                <div class="latest-post-header">
-                    <h4 class="text-uppercase">latest posts</h4>
-                    <h1>Florist Tricks</h1>
-                </div>
-                <div class="latest-post-btn-container">
-                    <a href="#" class="btn text-uppercase">view all posts</a>
-                </div>
-            </div> -->
-            <div class="latest-post-body-container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-1.jpg.webp" alt="blog 1">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">Trend news</span>
+    <!-- page header section end -->  
+    <!-- Portfolio body start -->
+    <section>
+        <div class="portfolio-body-container">
+            <div class="container">
+                <div class="row portfolio-grid">
+                    <div class="col-lg-4">
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-1.jpg.webp" alt="portfolio-1.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>8 Romantic Gifts to Celebrate Your Wedding Anniversary</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-2.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-2.jpg.webp" alt="portfolio-2.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Red Rose - Flower of love of Greek Mythology</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-3.jpg.webp" alt="blog 3">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">DIY & CRAFTS</span>
+                        <div class=" py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-3.jpg.webp" alt="portfolio-3.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Beautiful Mandalas Made From Flowers by Kathy Klein</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-4.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TREND NEWS</span>
+                    <div class="col-lg-4 px-2">
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-4.jpg.webp" alt="portfolio-5.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>6 Unique Features of the Floret Online Workshop</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-5.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-5.jpg.webp" alt="portfolio-5.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Beyond Red Roses: Valentine’s Day Gift Guide</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-6.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">DIY & CRAFTS</span>
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-6.jpg.webp" alt="portfolio-6.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>A Year in Flowers Makes the New York Times Bestseller List</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-7.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TREND NEWS</span>
+                    <div class="col-lg-4 px-2">
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-7.jpg.webp" alt="portfolio-7.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Launching A Year in Flowersinto the World</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-8.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-8.jpg.webp" alt="portfolio-8.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Beyond Red Roses: Valentine’s Day Gift Guide</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-9.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">DIY & CRAFTS</span>
+                        <div class="py-2">
+                            <div class="portfolio-item-container">
+                                <div class="porfolio-item-img">
+                                    <img src="./assets/imgs/portfolio/portfolio-9.jpg.webp" alt="portfolio-9.jpg">
+                                    <div class=" text-center portfolio-items-content">
+                                        <h4 class="d-block">Flower Day</h4>
+                                        <span>Decoration</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Pansies and Violas for Cut Flowers</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </section>
-    <!-- blog section end -->
+    <!-- Portfolio body End -->
     <!-- follow us section start -->
     <section class="follow-us-section">
         <div class="p-3 follw-us-section-container">
@@ -262,7 +225,7 @@
             </div>
         </div>
     </section>
-    <!-- follow us section end -->    
+    <!-- follow us section end -->
     <!-- footer section start -->
     <footer>
         <div class="footer-section-container">
@@ -346,7 +309,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/blog.js"></script>
+    <script src="./custom_js/portfolio.js"></script>
     
     
 </body>

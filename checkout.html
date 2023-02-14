@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our blog</title>
+    <title>Check out</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -42,7 +42,7 @@
                     <li class="nav-item"><a href="./about.html" class="nav-link ">about</a></li>
                     <li class="nav-item"><a href="./service.html" class="nav-link">services</a></li>
                     <li class="nav-item"><a href="./shop.html" class="nav-link">shop</a></li>
-                    <li class="nav-item"><a href="./cart.html" class="nav-link">pages</a>
+                    <li class="nav-item"><a href="./cart.html" class="nav-link active">pages</a>
                         <ul class="list-group">
                             <li class="list-group-item"><a href="./cart.html">Cart</a></li>
                             <li class="list-group-item"><a href="./checkout.html">Checkout</a></li>
@@ -52,9 +52,9 @@
                             <li class="list-group-item"><a href="./blog_detail.html">Blog Details</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link active">blog</a></li>
+                    <li class="nav-item"><a href="./blog.html" class="nav-link ">blog</a></li>
                     <li class="nav-item"><a href="./contactus.html" class="nav-link">contact</a></li>
-                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
+                    <li class="nav-item"><a href="javascrpt:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
                     <li class="nav-item"><li class="nav-item"><a href="./cart.html" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
@@ -65,166 +65,128 @@
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
-                <h1>Our blog</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="#" class="text-muted">blog</a></span>
+                <h1>Check out</h1>
+                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./checkout.html" class="text-muted">checkout</a></span>
             </div>
         </div>
     </section>
-    <!-- page header section end -->
-    <!-- blog section start -->
-    <section class="latest-post-section py-5">
-        <div class="container latest-post-container">
-            <!-- <div class="d-flex justify-content-between align-items-center py-5 latest-post-heard-container ">
-                <div class="latest-post-header">
-                    <h4 class="text-uppercase">latest posts</h4>
-                    <h1>Florist Tricks</h1>
-                </div>
-                <div class="latest-post-btn-container">
-                    <a href="#" class="btn text-uppercase">view all posts</a>
-                </div>
-            </div> -->
-            <div class="latest-post-body-container">
+    <!-- page header section end -->  
+    <!-- Check out section start -->
+    <section>
+        <div class="cart-table-section checkout-section">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-1.jpg.webp" alt="blog 1">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">Trend news</span>
+                    <div class="col-lg-8 col-md-12 p-3">
+                        <div class="contact-information-container">
+                            <div class="d-flex justify-content-between align-items-center mb-3 contact-information-header">
+                                <h1>Contact Informaiton</h1>
+                                <span class="d-block">Already have an account? <a href="./logIn.html" class="nav-link d-inline">Login</a></span>
+                            </div>
+                            <div class="form-group my-2">
+                                <input type="text" name="emailorphonr" id="form-control" class="form-control rounded-0 py-2 px-3" placeholder="Email or mobile phone number">
+                            </div>
+                            <div class="form-group my-3">
+                                <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
+                                <label for="keep">Keep me up to dateon news and exclusive offers</label>
                             </div>
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>8 Romantic Gifts to Celebrate Your Wedding Anniversary</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
+                        <div class="contact-information-container shipping-address-container">
+                            <div class="d-flex justify-content-start align-items-center mb-3 contact-information-header shipping-address-header">
+                                <h1>Shipping address</h1>
+                            </div>
+                            <div class="shipping-address-body">
+                                <form action="" method="get" enctype="multipart/form-data">
+                                    <div class="form-group mb-3">
+                                        <label for="firstname" class="mb-2">First name</label>
+                                        <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="lastname" class="mb-2">Last name</label>
+                                        <input type="text" name="lastname" id="lastname" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="contact" class="mb-2">Contact</label>
+                                        <input type="text" name="contact" id="contact" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="address" class="mb-2">Address</label>
+                                        <input type="text" name="str-address" id="str-address" class="form-control rounded-0 py-2 px-3 mb-2" placeholder="Steet Address">
+                                        <input type="text" name="apart-address" id="apart-address" class="form-control rounded-0 py-2 px-3" placeholder="Apartment,suite,unite ect (optional)">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="town" class="mb-2">Country/State</label>
+                                        <input type="text" name="town" id="town" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="postcode" class="mb-2">Postcode/Zip</label>
+                                        <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="odernote" class="mb-2">Order note</label>
+                                        <input type="text" name="odernote" id="odernote" class="form-control rounded-0 py-2 px-3" placeholder="Note about your order, e.g, special noe for delivery"> 
+                                    </div>
+                                    <div class="form-group my-3">
+                                        <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
+                                        <label for="keep">Keep me up to dateon news and exclusive offers</label>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
+                        
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-2.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
-                            </div>
+                    <div class="col-lg-4 col-md-12 p-3">
+
+                        <div class="p-4 apply-box-container your-order-container mb-5">
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <h3 class="mb-3">Your Order</h3>
+                                <p class="pb-2 text-muted">Enter coupon code. It will be applied at checkout.</p>
+                                <div class="d-flex apply-box pb-5">
+                                    <input type="text" name="code" id="apply-input" class="rounded-0 apply-input" placeholder="Your code Here">
+                                    <button type="submit" class="text-uppercase fw-semibold text-light bg-dark btn rounded-0">apply</button>
+                                </div>
+                                <h3 class="mb-5">Cart Total</h3>
+                                <div id="cart-list-container">
+                                    <!-- <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-muted"><span class="quantity">3</span>x Succulent gym</span>
+                                        <input type="hidden" name="" id="price" class="price" value="25">
+                                        <span class="fw-bold">$<span class="total-price">0</span>.00</span>
+                                    </div> -->
+
+                                </div>
+                                
+                                <hr>
+                                <div class="cart-total-box-container checkbox-total-container">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-muted">Subtotal</span>
+                                        <span class="fw-bold">$<span id="cart-subtotal">0</span>.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <span class="text-muted">Total</span>
+                                        <span class="fw-bold">$<span id="cart-total">0</span>.00</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group my-3">
+                                    <input type="checkbox" name="cheque" id="cheque" class=" me-2">
+                                    <label for="cheque">Cheque payment</label>
+                                </div>
+                                <div class="form-group my-3">
+                                    <input type="checkbox" name="paypal" id="paypal" class=" me-2">
+                                    <label for="paypal">PayPal</label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to Order</a>
+                            </form>
+                            
                         </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Red Rose - Flower of love of Greek Mythology</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-3.jpg.webp" alt="blog 3">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">DIY & CRAFTS</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Beautiful Mandalas Made From Flowers by Kathy Klein</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-4.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TREND NEWS</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>6 Unique Features of the Floret Online Workshop</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-5.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Beyond Red Roses: Valentine’s Day Gift Guide</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-6.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">DIY & CRAFTS</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>A Year in Flowers Makes the New York Times Bestseller List</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-7.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TREND NEWS</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Launching A Year in Flowersinto the World</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-8.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">TIPS & IDEA</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Beyond Red Roses: Valentine’s Day Gift Guide</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3 latest-body-items-container">
-                        <div class="lates-body-items-img-container">
-                            <img src="./assets/imgs/products/blog-9.jpg.webp" alt="blog 2">
-                            <div class="items-title-container">
-                                <span class="text-uppercase fw-semibold">DIY & CRAFTS</span>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3 p-3 latest-body-items-content-container ">
-                            <h1>Pansies and Violas for Cut Flowers</h1>
-                            <p class="text-muted">
-                                Flowers have a language all their own. In Victorian times, receiving a…
-                            </p>
-                            <span class="text-muted">MAY 22, 2020</span>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
-    <!-- blog section end -->
+    <!-- Check Out section end -->
     <!-- follow us section start -->
     <section class="follow-us-section">
         <div class="p-3 follw-us-section-container">
@@ -262,7 +224,7 @@
             </div>
         </div>
     </section>
-    <!-- follow us section end -->    
+    <!-- follow us section end -->
     <!-- footer section start -->
     <footer>
         <div class="footer-section-container">
@@ -346,8 +308,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/blog.js"></script>
-    
+    <script src="./custom_js/checkout.js"></script>
     
 </body>
 </html>

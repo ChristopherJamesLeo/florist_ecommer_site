@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Product detail</title>
     <link rel="shortcut icon" href="./assets/imgs/logo_fav/benefit-1.png.webp" type="image/x-icon">
 
     <!--  bootstrap 5.3 css1 js 1 -->
@@ -40,9 +40,9 @@
                 <ul class="navbar-nav text-uppercase ">
                     <li class="nav-item "><a href="./index.html" class="nav-link ">home</a></li>
                     <li class="nav-item"><a href="./about.html" class="nav-link ">about</a></li>
-                    <li class="nav-item"><a href="./service.html" class="nav-link ">services</a></li>
-                    <li class="nav-item"><a href="./shop.html" class="nav-link active">shop</a></li>
-                    <li class="nav-item"><a href="./cart.html" class="nav-link ">pages</a>
+                    <li class="nav-item"><a href="./service.html" class="nav-link">services</a></li>
+                    <li class="nav-item"><a href="./shop.html" class="nav-link">shop</a></li>
+                    <li class="nav-item"><a href="./cart.html" class="nav-link active">pages</a>
                         <ul class="list-group">
                             <li class="list-group-item"><a href="./cart.html">Cart</a></li>
                             <li class="list-group-item"><a href="./checkout.html">Checkout</a></li>
@@ -66,31 +66,141 @@
     <section class="page-header mb-5">
         <div class="py-5 page-header-container">
             <div class="text-center mx-auto page-header-content">
-                <h1>Shop</h1>
-                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="#" class="text-muted">Shop</a></span>
+                <h1>Product detail</h1>
+                <span class="text-uppercase text-muted"><a href="./index.html">home</a> &nbsp; | &nbsp; <a href="./checkout.html" class="text-muted">Product detail</a></span>
             </div>
         </div>
     </section>
-    <!-- page header section end -->
-    <!-- our flower section start -->
+    <!-- page header section end -->  
+    <!-- Product Detail section start -->
+    <section>
+        <div class="product-detail-section-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 p-2">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-12 main-product-img-container">
+                                <img src="./assets/imgs/products/product-details-1.jpg.webp" id="main-product-img" class="main-product-img" alt="product-details-1">
+                            </div>
+                            <div class="col-lg-3 col-md-12 slide-product-img-container">
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-1.jpg.webp" show-img="0" alt="thumb-1">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-2.jpg.webp" show-img="1" alt="thumb-2">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-3.jpg.webp" show-img="2" alt="thumb-3">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-4.jpg.webp" show-img="3" alt="thumb-4">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-5.jpg.webp" show-img="4" alt="thumb-5">
+                                </div>
+                                <div class="slide-product-img">
+                                    <img src="./assets/imgs/products/thumb-6.jpg.webp" show-img="5" alt="thumb-6">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            let getMainImg = document.getElementById("main-product-img");
+                            let getSlideImgs = document.querySelectorAll(".slide-product-img img");
+                            let productImgs = ["product-details-2.jpg.webp","product-details-3.jpg.webp","product-details-4.jpg.webp","product-details-5.jpg.webp","product-details-6.jpg.webp","product-details-1.jpg.webp"];
+
+                            getSlideImgs.forEach(function(getSlideImg){
+                                getSlideImg.addEventListener("click",function(){
+                                    // console.log(this.getAttribute("show-img"));
+                                    getMainImg.src = `./assets/imgs/products/`+ productImgs[this.getAttribute("show-img")];
+                                })
+                            })
+                        </script>
+                    </div>
+                    <div class="col-lg-6 col-md-12 p-2 product-detail-form-container">
+                        <form action="" method="get" enctype="multipart/form-data">
+                            <div class="mb-5 form-header">
+                                <div class="d-flex justify-content-between align-items-center product-detail-form-header">
+                                    <div class="product-detail-header">
+                                        <span class="text-uppercase">Succulent</span><br>
+                                        <h1>Fly Me To The Moon</h1>
+                                    </div>
+                                    <div class="product-detail-price">
+                                        <span>$34.00</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center product-rating-container ">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="text-center px-2 review-count">
+                                        <span>03 reviews</span>
+                                    </div>
+                                    <div class="write-review">
+                                        <span>Write a review</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-head-categories">
+                                <span class="text-muted">Categories: </span><span>Succlent</span><br>
+                                <span class="text-muted">Product code: </span><span>PM 101</span><br>
+                                <span class="text-muted">Reward points: </span><span>30</span><br>
+                                <span class="text-muted">Availability: </span><span>In Stock</span><br>
+                            </div>
+                            <hr class="my-4">
+                            <div class="product-control">
+                                <input type="number" name="p-quantity" id="p-quantity" class="p-quantity" value="2">
+                                <a href="#" class="text-uppercase text-light bg-dark nav-link addcart">Add to cart</a>
+                                <a href="#" class="addwishlist"><i class="fas fa-heart"></i></a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="product-detail-show-container">
+                                <div class="mb-3 product-detail-tab">
+                                    <span id="description" class="detail-tabs active" show-detail = "0">Description</span> / <span id="shipping-return" class="detail-tabs " show-detail = "1">Shipping & Returns</span> / <span id="review" class="detail-tabs " show-detail = "2">Reviews ( 03 )</span>
+                                </div>
+                                <div class="product-detail-para-container">
+                                    <div class="show-para description">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque numquam cumque dicta, qui ab harum voluptas quos expedita ipsum praesentium culpa perferendis ipsam hic maxime, accusamus, minus odio et?
+                                        </p>
+                                    </div>
+                                    <div class="show-para shipping-return">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque numquam
+                                        </p>
+                                    </div>
+                                    <div class="show-para reviews">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque numquam cumque dicta, qui ab harum voluptas quos expedita ipsum praesentium culpa perferendis ipsam hic maxime, accusamus, minus odio et? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non facilis ea odio rerum? Sed voluptatum nulla voluptates blanditiis consequatur cum, dolore, qui cupiditate quasi esse exercitationem beatae, voluptate non ipsum.
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            
+
+
+                        </form>
+                    </div>
+                </div>
+                <hr class="my-4">
+            </div>
+        </div>
+    </section>
+    <!-- Product Detail Section End -->
+    <!-- Relative Product Section Start -->
     <section class="our-flower py-5">
         <div class="our-flower-container container">
             <!-- title start -->
-            <div class="text-center section-title ">
-                <h5 class="text-uppercase">our flower</h5>
-                <h1>New Arrivals</h1>
+            <div class="text-center mb-4 section-title ">
+                <h1>Related products</h1>
             </div>
             <!-- title end -->
-            <div class="our-flower-taps-container" >
-                <ul class="d-flex flex-wrap justify-content-center align-items-center our-flower-taps-list-group">
-                    <li class="active"><a href="javascript:void(0)" id="all" class="ourflowertaps" data-items = "all">All</a></li>
-                    <li><a href="javascript:void(0)" id="bouquet" class="ourflowertaps" data-items = "bouquet">Bouquet</a></li>
-                    <li><a href="javascript:void(0)" id="flowerbox" class="ourflowertaps" data-items = "flowerbox">Flower Box</a></li>
-                    <li><a href="javascript:void(0)" id="flowershelf" class="ourflowertaps" data-items = "flowershelf">Flower Shelf</a></li>
-                    <li><a href="javascript:void(0)" id="basketflower" class="ourflowertaps" data-items = "basketflower">Basket Of Flower</a></li>
-                    <li><a href="javascript:void(0)" id="gift" class="ourflowertaps" data-items = "giftcombos">Gift Combos</a></li>
-                </ul>
-            </div>
             <div class="our-flower-item-show-main-container">
                 <div class="our-flower-item-show-container">
                     <div class="row">
@@ -320,7 +430,45 @@
             </div>
         </div>
     </section>
-    <!-- our flower section end -->
+    <!-- Relative Product Sectio End -->
+    <!-- follow us section start -->
+    <section class="follow-us-section">
+        <div class="p-3 follw-us-section-container">
+            <div class="row justify-content-evenly align-items-start flex-wrap">
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+                <div class="mb-3 follow-us-items-container">
+                    <div class=" text-center follw-us-items-content">
+                        <i class="fab fa-instagram"></i>
+                        <span class="d-block">Follow Us <a href="#">@florist</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- follow us section end -->
     <!-- footer section start -->
     <footer>
         <div class="footer-section-container">
@@ -404,7 +552,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
+    <script src="./custom_js/product_detail.js"></script>
+    
     
 </body>
 </html>
