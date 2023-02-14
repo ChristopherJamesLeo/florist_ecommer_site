@@ -54,23 +54,12 @@
                     </li>
                     <li class="nav-item"><a href="./blog.html" class="nav-link ">blog</a></li>
                     <li class="nav-item"><a href="./contactus.html" class="nav-link">contact</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
+                    <li class="nav-item"><a href="javascrpt:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(01) <span class="nav-remark-price">$65.0</span></span></a></li>
+                    <li class="nav-item"><li class="nav-item"><a href="./cart.html" id="show-cart-amount" class="nav-link d-flex"></a></li></li>
                 </ul>
             </div>
         </nav>
-        <script>
-            let getHeader = document.querySelector(".header");
-            window.onscroll = function(){
-                let getscrollval = window.scrollY;
-                if(getscrollval > 0) {
-                    getHeader.classList.add("header-ani");
-                }else {
-                    getHeader.classList.remove("header-ani");
-                }
-            }
-        </script>
     </header>
     <!-- page header section start  -->
     <section class="page-header mb-5">
@@ -195,45 +184,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            let getCarts = JSON.parse(localStorage.getItem("carts"));
-            let cartListContainer = document.getElementById("cart-list-container");
 
-            getCarts.forEach(function(getCart,idx){
-                let getCartlist = `
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <span class="text-muted"><span class="quantity">${getCart.quantity}</span>x ${getCart.name}</span>
-                                        <input type="hidden" name="" id="price" class="price" value="${getCart.price}">
-                                        <span class="fw-bold">$<span class="total-price">${getCart.price}</span>.00</span>
-                                    </div>`;
-                cartListContainer.innerHTML += getCartlist;
-            })
-
-            let getProductPrices = document.querySelectorAll(".price");
-            let getQuantitys = document.querySelectorAll(".quantity");
-            let getTotalPrices = document.querySelectorAll(".total-price");
-            let getcartsubtotal = document.querySelector("#cart-subtotal");
-            let getcarttotal = document.querySelector("#cart-total");
-
-            var getCartTotalvalue = 0
-
-            getProductPrices.forEach(function(getProductPrice,idx){
-                // console.log(getProductPrice.innerText,idx)
-                let getPrice = getProductPrice.value;
-                let getQuan = +getQuantitys[idx].innerText ;
-                // console.log(getQuan)
-                // console.log(typeof getPrice)
-                let getTotal = getPrice * getQuan;
-                getTotalPrices[idx].innerText = getTotal;
-                // console.log(getTotal)
-                getCartTotalvalue += getTotal;
-                
-            })
-            // console.log(getCartTotal);
-            getcartsubtotal.innerText = getCartTotalvalue;
-            getcarttotal.innerText = getCartTotalvalue;
-
-        </script>
     </section>
     <!-- Check Out section end -->
     <!-- follow us section start -->
@@ -357,14 +308,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
-    
-    <script>
-        $(document).ready(function(){
-
-
-        });
-    </script>
+    <script src="./custom_js/checkout.js"></script>
     
 </body>
 </html>
