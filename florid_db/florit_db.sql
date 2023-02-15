@@ -28,6 +28,23 @@ CREATE TABLE IF NOT EXISTS products (
     description MEDIUMTEXT
 );
 
+INSERT INTO products (name,price,categories,rating,product_img1,product_img2,description) VALUES 
+("product-1",14,"bouquet",2,"product-1.jpg.webp","product-1.jpg.webp", "Most people are unaware of the less common flower"),
+("product-2",20,"flowerbox",3,"product-2.jpg.webp","product-2.jpg.webp", "Most people are unaware of the less common flower"),
+("product-3",15,"flowershelf",4,"product-3.jpg.webp","product-3.jpg.webp", "Most people are unaware of the less common flower"),
+("product-4",28,"basketflower",2,"product-4.jpg.webp","product-4.jpg.webp", "Most people are unaware of the less common flower"),
+("product-5",29,"gift",1,"product-5.jpg.webp","product-5.jpg.webp", "Most people are unaware of the less common flower"),
+("product-6",32,"bouquet",3,"product-6.jpg.webp","product-6.jpg.webp", "Most people are unaware of the less common flower"),
+("product-7",17,"flowerbox",2,"product-7.jpg.webp","product-7.jpg.webp", "Most people are unaware of the less common flower"),
+("product-8",13,"flowershelf",4,"product-8.jpg.webp","product-8.jpg.webp", "Most people are unaware of the less common flower"),
+("product-9",14,"basketflower",1,"product-9.jpg.webp","product-9.jpg.webp", "Most people are unaware of the less common flower"),
+("product-10",9,"gift",3,"product-10.jpg.webp","product-10.jpg.webp", "Most people are unaware of the less common flower"),
+("product-11",25,"bouquet",5,"thumb-1.jpg.webp","thumb-1.jpg.webp", "Most people are unaware of the less common flower"),
+("product-12",40,"flowerbox",2,"thumb-2.jpg.webp","thumb-2.jpg.webp", "Most people are unaware of the less common flower"),
+("product-13",37,"flowerbox",1,"thumb-3.jpg.webp","thumb-3.jpg.webp", "Most people are unaware of the less common flower"),
+("product-14",29,"flowershelf",4,"thumb-4.jpg.webp","thumb-4.jpg.webp", "Most people are unaware of the less common flower"),
+("product-15",16,"basketflower",3,"thumb-5.jpg.webp","thumb-5.jpg.webp", "Most people are unaware of the less common flower");
+
 CREATE TABLE IF NOT EXISTS reviews (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     p_id INT NOT NULL ,

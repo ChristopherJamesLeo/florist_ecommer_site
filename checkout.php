@@ -95,7 +95,7 @@
                                 <h1>Shipping address</h1>
                             </div>
                             <div class="shipping-address-body">
-                                <form action="" method="get" enctype="multipart/form-data">
+                                <form action="./phpEngine/editorder.php" method="get" enctype="multipart/form-data">
                                     <div class="form-group mb-3">
                                         <label for="firstname" class="mb-2">First name</label>
                                         <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3">
@@ -129,7 +129,7 @@
                                         <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
                                         <label for="keep">Keep me up to dateon news and exclusive offers</label>
                                     </div>
-                                </form>
+                                
                             </div>
                         </div>
                         
@@ -137,7 +137,7 @@
                     <div class="col-lg-4 col-md-12 p-3">
 
                         <div class="p-4 apply-box-container your-order-container mb-5">
-                            <form action="" method="post" enctype="multipart/form-data">
+                            <!-- <form action="./phpEngine/addorder.php" method="post" enctype="multipart/form-data"> -->
                                 <h3 class="mb-3">Your Order</h3>
                                 <p class="pb-2 text-muted">Enter coupon code. It will be applied at checkout.</p>
                                 <div class="d-flex apply-box pb-5">
@@ -145,12 +145,14 @@
                                     <button type="submit" class="text-uppercase fw-semibold text-light bg-dark btn rounded-0">apply</button>
                                 </div>
                                 <h3 class="mb-5">Cart Total</h3>
+
                                 <div id="cart-list-container">
                                     <!-- <div class="d-flex justify-content-between align-items-center mb-2">
                                         <span class="text-muted"><span class="quantity">3</span>x Succulent gym</span>
                                         <input type="hidden" name="" id="price" class="price" value="25">
                                         <span class="fw-bold">$<span class="total-price">0</span>.00</span>
                                     </div> -->
+
 
                                 </div>
                                 
@@ -167,15 +169,15 @@
                                 </div>
                                 <hr>
                                 <div class="form-group my-3">
-                                    <input type="checkbox" name="cheque" id="cheque" class=" me-2">
+                                    <input type="radio" name="paymethod" id="cheque" class=" me-2" value="cheque" selected>
                                     <label for="cheque">Cheque payment</label>
                                 </div>
                                 <div class="form-group my-3">
-                                    <input type="checkbox" name="paypal" id="paypal" class=" me-2">
+                                    <input type="radio" name="paymethod"  id="paypal" class=" me-2" value="paypal">
                                     <label for="paypal">PayPal</label>
                                 </div>
                                 
-                                <button type="submit" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to Order</a>
+                                <button type="radio" id="submitbtn" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to Order</a>
                             </form>
                             
                         </div>
@@ -308,7 +310,98 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- custom js -->
-    <script src="./custom_js/checkout.js"></script>
+    <!-- <script src="./custom_js/checkout.js"></script> -->
+<script>
+let getHeader = document.querySelector(".header");
+window.onscroll = function(){
+    let getscrollval = window.scrollY;
+    if(getscrollval > 0) {
+        getHeader.classList.add("header-ani");
+    }else {
+        getHeader.classList.remove("header-ani");
+    }
+}
+let getCarts = JSON.parse(localStorage.getItem("carts"));
+let getShowCartAmount = document.getElementById("show-cart-amount");
+let cartAmount = 0
+if(getCarts != null){
+    getCarts.forEach(function(getCart){
+        let getPrice = +getCart.price; // to changet number datatype
+        cartAmount += getPrice;
+    })
+}
+
+// Json Start
+    // console.log (getCarts);
+document.getElementById("submitbtn").addEventListener("click",function(e){
+        // e.preventDefault();
+        // console.log("hello")
+        if(getCarts != null){
+            $.ajax({
+                url : "./phpEngine/addorder.php",
+                method : "post",
+                data : { getCarts : JSON.stringify( getCarts )},
+                success : function(res){
+            // success ဖြစ်သွားပါက addorder file ထဲရှိ value သည် res ထဲတွင် result အနေဖြင့် ဖော်ပြပေးမည်ဖြစသ််ည
+            // console.log(res);
+                }
+            })
+        localStorage.removeItem("carts");
+        }
+        
+})
+
+    
+
+// Json End 
+// console.log(cartAmount);
+// console.log(getCarts.length)
+if(getCarts != null){
+    let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
+    getShowCartAmount.innerHTML = cartIcons;
+}
+
+// let getCarts = JSON.parse(localStorage.getItem("carts"));
+let cartListContainer = document.getElementById("cart-list-container");
+if(getCarts != null){
+    getCarts.forEach(function(getCart,idx){
+    let getCartlist = `
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted"><span class="quantity">${getCart.quantity}</span>x ${getCart.name}</span>
+                            <input type="hidden" name="price" id="price" class="price" value="${getCart.price}">
+                            <span class="fw-bold">$<span class="total-price">${getCart.price}</span>.00</span>
+                            
+                        </div>`;
+    cartListContainer.innerHTML += getCartlist;
+})
+}
+
+
+let getProductPrices = document.querySelectorAll(".price");
+let getQuantitys = document.querySelectorAll(".quantity");
+let getTotalPrices = document.querySelectorAll(".total-price");
+let getcartsubtotal = document.querySelector("#cart-subtotal");
+let getcarttotal = document.querySelector("#cart-total");
+
+var getCartTotalvalue = 0
+
+getProductPrices.forEach(function(getProductPrice,idx){
+    // console.log(getProductPrice.innerText,idx)
+    let getPrice = getProductPrice.value;
+    let getQuan = +getQuantitys[idx].innerText ;
+    // console.log(getQuan)
+    // console.log(typeof getPrice)
+    let getTotal = getPrice * getQuan;
+    getTotalPrices[idx].innerText = getTotal;
+    // console.log(getTotal)
+    getCartTotalvalue += getTotal;
+    
+})
+// console.log(getCartTotal);
+getcartsubtotal.innerText = getCartTotalvalue;
+getcarttotal.innerText = getCartTotalvalue;
+
+</script>
     
 </body>
 </html>

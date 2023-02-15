@@ -1,3 +1,11 @@
+<?php
+    include "./phpEngine/config.php";
+
+    session_start();
+    // echo $_SESSION["email"];
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,9 +62,17 @@
                     </li>
                     <li class="nav-item"><a href="./blog.php" class="nav-link">blog</a></li>
                     <li class="nav-item"><a href="./contactus.php" class="nav-link">contact</a></li>
+                    <!-- <li class="nav-item"><a href="./contactus.php" class="nav-link">Log In</a></li> -->
                     <li class="nav-item"><a href="javascript:void(0)" class="nav-link"><ion-icon name="search-outline"></ion-icon></a></li>
                     <li class="nav-item"><a href="#" class="nav-link d-flex"><ion-icon name="heart-outline"></ion-icon><span class="nav-remark">(01)</span></a></li>
-                    <li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li>
+                    <?php
+                        if(isset($_SESSION["id"])){
+                    ?>
+                        <li class="nav-item"><a href="./cart.php" id="show-cart-amount" class="nav-link d-flex"></a></li>
+                    <?php
+                        }
+                    ?>
+                    
                 </ul>
             </div>
         </nav>
@@ -257,9 +273,17 @@
             <div class="our-flower-item-show-main-container">
                 <div class="our-flower-item-show-container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container bouquet">
+                        <?php
+                            $psql = "SELECT * FROM products";
+                            $presult = mysqli_query( $conn , $psql );
+                            if(mysqli_num_rows($presult)){
+                                while($prow = mysqli_fetch_assoc($presult)){
+                                    
+                        ?>
+                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container <?php echo $prow["categories"]; ?>">
+                            <input type="hidden" name ="p-id" value = "<?php echo $prow['id'] ;?>">
                             <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-1.jpg.webp" alt="product-1.jpg">
+                                <img src="./assets/imgs/products/<?php echo $prow["product_img1"] ;?>" alt="<?php echo $prow["product_img1"]; ?>">
                                 <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
                                     <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
                                     <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
@@ -271,212 +295,19 @@
                             </div>
                             <div class="text-center our-flower-item-content-container">
                                 <h3 class="item-name">
-                                    Fly Me To The Moon
+                                <?php echo $prow["name"]; ?>
                                 </h3>
                                 <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
+                                    <span>$</span><span class="price"><?php echo $prow["price"]; ?></span><span>.00</span>
                                 </h6>
                                 <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
                             </div>
                         </div> 
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowerbox">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-2.jpg.webp" alt="product-2">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container bouquet">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-3.jpg.webp" alt="product-3.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container bouquet">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-4.jpg.webp" alt="product-4.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowerbox">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-5.jpg.webp" alt="product-5.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container giftcombos">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-6.jpg.webp" alt="product-6.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container basketflower">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-7.jpg.webp" alt="product-7.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container giftcombos">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-8.jpg.webp" alt="product-8.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowershelf">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-9.jpg.webp" alt="product-9.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>   
-                        <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container flowershelf">
-                            <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/product-10.jpg.webp" alt="product-10.jpg">
-                                <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
-                                    <a href="#" class="our-flower-item-icon"><ion-icon name="bag-handle-outline"></ion-icon></a>
-                                </div>
-                                <div class="text-uppercase fw-bold item-info">
-                                    <span class="item-detail-info">New</span>
-                                </div>
-                            </div>
-                            <div class="text-center our-flower-item-content-container">
-                                <h3 class="item-name">
-                                    Fly Me To The Moon
-                                </h3>
-                                <h6 class="item-price">
-                                    <span>$</span><span class="price">230</span><span>.00</span>
-                                </h6>
-                                <a href="javascript:void(0)" class="d-block text-uppercase item-add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>                                                                                                                                                                                                                                                                                                                                                     
+                        <?php
+                                }
+                            }
+                        ?>
+                                                                                                    
                     </div>
 
                 </div>
@@ -718,7 +549,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">My cart</a></li>
                                     <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Wishlist</a></li>
-                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        if (!isset($_SESSION["id"])){
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./login.php"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        }else {
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./phpEngine/logout.php"  class=" text-muted text-decoration-none">Log Out</a></li>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -765,7 +608,125 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!-- custom js -->
-    <script src="./custom_js/home.js"></script>
+    <!-- <script src="./custom_js/home.js"></script> -->
+<script>
+let getHeader = document.querySelector(".header");
+        window.onscroll = function(){
+            let getscrollval = window.scrollY;
+            if(getscrollval > 0) {
+                getHeader.classList.add("header-ani");
+            }else {
+                getHeader.classList.remove("header-ani");
+            }
+        }
+        let getAddCartBtns = document.querySelectorAll(".item-add-to-cart");
+        // console.log(getAddCartBtns);
+        var cartArr = [] ;
+        getAddCartBtns.forEach(function(getAddCartBtn){
+            // console.log(getAddCartBtn);
+            getAddCartBtn.addEventListener("click",function(e){
+                // console.log(this.parentElement.querySelector(".price").textContent.trim());
+                let getImgSrc = this.parentElement.previousElementSibling.querySelector("img").src ;
+                let getProductName = this.parentElement.querySelector(".item-name").textContent.trim();
+                let getPrice = this.parentElement.querySelector(".price").textContent.trim();
+                let productid = this.parentElement.parentElement.querySelector("input").value;
+                let useriddb = <?php echo $_SESSION["id"] ?>;
+                // console.log(getImgSrc,getProductName,getPrice);
+                
+                if(localStorage.getItem("carts") === null){
+                    cartArr = [];
+                }else {
+                    cartArr = JSON.parse(localStorage.getItem("carts"))
+                }
+                console.log("hello");
+                cartArr.push({
+                    
+                    userId : useriddb,
+                    pid : productid,
+                    img : getImgSrc,
+                    name : getProductName,
+                    price : getPrice,
+                    quantity : 1 
+                })
+                localStorage.setItem("carts" , JSON.stringify(cartArr));
+
+                // console.log(cartArr);
+            })
+        });
+
+let getCarts = JSON.parse(localStorage.getItem("carts"));
+let getShowCartAmount = document.getElementById("show-cart-amount");
+let cartAmount = 0
+if(getCarts != null){
+    getCarts.forEach(function(getCart){
+        let getPrice = +getCart.price; // to changet number datatype
+        cartAmount += getPrice;
+    })
+}
+// console.log(cartAmount);
+// console.log(getCarts.length)
+console.log(getCarts);
+<?php
+    if(isset($_SESSION["id"])){
+        ?>
+        if(getCarts !== null) {
+            let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
+            getShowCartAmount.innerHTML = cartIcons;
+        }
+        <?php
+    }
+    ?>
+        
+    
+
+
+
+
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                autoWidth: false,
+                items: 1,
+                loop: true,
+                autoplay : true,
+                autoplayTimeout : 8000,
+                autoplayHoverPause : true,
+                smartSpeed:2000,
+            });
+            $("#owl-carousel").owlCarousel({
+                autoWidth: false,
+                items: 3,
+                loop: true,
+                autoplay : true,
+                autoplayTimeout : 8000,
+                autoplayHoverPause : true,
+                smartSpeed:2000,
+            });
+            $(".ourflowertaps").click(function(){
+        $tabvalue = $(this).attr("data-items");
+        // $parent = $(this).parent();
+        // console.log($parent);
+        $(this).parent().addClass("active").siblings().removeClass("active");
+        if($tabvalue === "all"){
+            // console.log($(".our-flower-item-container"))
+            $(".our-flower-item-container").show("slow").css({
+                "transform" : "scale(1)",
+                "transform-origin" : "center",
+            });
+        }else {
+            $(".our-flower-item-container").hide();
+            $(".our-flower-item-container").not("."+$tabvalue).css({
+                "transform" : "scale(0)",
+                "transform-origin" : "center",
+            });
+            $(".our-flower-item-container").filter("."+$tabvalue).show("slow").css({
+                "transform" : "scale(1)",
+                "transform-origin" : "center",
+            });
+        }
+    })
+        });
+        
+</script>
 </body>
 
 </html>

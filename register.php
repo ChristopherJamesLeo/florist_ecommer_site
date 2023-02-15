@@ -88,7 +88,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 mx-auto log-in-form-container">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="./phpEngine/addUser.php" method="post" enctype="multipart/form-data">
                             <h3 class="mb-3">Register / <a href="./logIn.php">Log In</a></h3>
                             <div class="row">
                                 <div class="form-group mb-4  col-lg-6">
@@ -135,6 +135,10 @@
                                 <div class="form-group mb-4">
                                     <label for="postcode" class="mb-2">Postcode/Zip</label>
                                     <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="userimg" class="mb-2">User Image</label>
+                                    <input type="file" name="userimg" id="userimg" class="form-control rounded-0 py-2 px-3">
                                 </div>
                             </div>
                             

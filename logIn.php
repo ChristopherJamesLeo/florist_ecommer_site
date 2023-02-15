@@ -88,7 +88,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 mx-auto log-in-form-container">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="./phpEngine/login.php" method="post" enctype="multipart/form-data">
                             <h3 class="mb-3">Log In / <a href="./register.php">Register</a></h3>
                             <div class="form-group mb-3">
                                 <input type="email" name="email" id="" class="form-control rounded-0 py-2 px-3" placeholder="Enter Your Email">

@@ -975,7 +975,7 @@
 .cart-total-box-container div {
     font-size: 17px;
 }
-.cart-total-box-container div:nth-of-type(2) span:nth-of-type(2) {
+.cart-total-box-container .cart-subtotal{
     color: var(--primary-global-color);
 }
 .cart-total-box-container a {
@@ -1369,9 +1369,9 @@
 .portfolio-body-container .portfolio-item-container .porfolio-item-img {
     position: relative;
 }
-/* .portfolio-body-container .portfolio-grid {
-
-} */
+.portfolio-body-container .portfolio-grid {
+    display: flex;
+}
 .portfolio-body-container .portfolio-item-container .porfolio-item-img img {
     width: 100%;
 
@@ -1398,3 +1398,34 @@
     transform: translate(-50%,-50%) scale(1);
 }
 /* Portfolio Page End */
+
+/* Log in page start */
+.log-in-form-container {
+    box-shadow: 2px 2px 15px #cccacabe;
+    padding: 50px;
+}
+.log-in-form-container form h3 {
+    font-family: var(--secondary-font-family);
+}
+.log-in-form-container form h3 a {
+    font-size: 15px;
+    color: var(--primary-global-color);
+}
+.log-in-form-container form {
+    font-family: var(--primary-font-family);
+}
+.log-in-form-container form input{
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+.log-in-form-container form input:focus{
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--primary-global-color);
+}
+.log-in-form-container form input[type=submit]{
+    background-color: var(--primary-global-color);
+    color: var(--primary-global-white);
+}
+/* log in page end */
