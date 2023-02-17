@@ -1,3 +1,8 @@
+<?php
+    include "./phpEngine/config.php";
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,12 +194,22 @@
                                 </div>
                             </div>
                             <div class="comments-box-container">
-                                <h3 class="my-4">28 COMMENTS</h3>
-                                <hr>
+                                
+                                <?php
+                                $sql = "SELECT * FROM blogs";
+                                $result = mysqli_query( $conn , $sql );
+                                if(mysqli_num_rows($result) > 0){
+                                ?>
+
+                                    <h3 class="my-4"><?php echo mysqli_num_rows($result); ?> COMMENTS</h3>
+                                     <hr>
+                                <?php
+                                    while($row = mysqli_fetch_assoc($result)){
+                                ?>  
                                 <div class="my-4  comments-boxs">
                                     <div class="mb-3 d-flex justify-content-between align-items-center">
                                         <div class="comments-box-header">
-                                            <h4 class="d-inline-block">Franklin Flower Farm</h4> <span class="text-muted">on April 20th 2020</span>
+                                            <h4 class="d-inline-block"><?php echo $row['name'] ?></h4> <span class="text-muted">on <?php echo $row['upload_at'] ?></span>
                                         </div>
                                         <div class="comments-box-reply">
                                             <a href="#" class="nav-link text-muted">Reply</a>
@@ -205,78 +220,29 @@
                                         Congratulations Erin and Chris and your entire team!
                                     </p>
                                     <p>
-                                        An achievement well-earned and much deserved! Thank you for advocating for local flowers and local flower farms in the US and worldwide.
+                                    <?php echo $row['comments'] ?>
                                     </p>
                                 </div>
                                 <hr>
-                                <div class="my-4  comments-boxs">
-                                    <div class="mb-3 d-flex justify-content-between align-items-center">
-                                        <div class="comments-box-header">
-                                            <h4 class="d-inline-block">Franklin Flower Farm</h4> <span class="text-muted">on April 20th 2020</span>
-                                        </div>
-                                        <div class="comments-box-reply">
-                                            <a href="#" class="nav-link text-muted">Reply</a>
-                                        </div>
-                                        
-                                    </div>
-                                    <p>
-                                        Congratulations Erin and Chris and your entire team!
-                                    </p>
-                                    <p>
-                                        An achievement well-earned and much deserved! Thank you for advocating for local flowers and local flower farms in the US and worldwide.
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="my-4  comments-boxs">
-                                    <div class="mb-3 d-flex justify-content-between align-items-center">
-                                        <div class="comments-box-header">
-                                            <h4 class="d-inline-block">Franklin Flower Farm</h4> <span class="text-muted">on April 20th 2020</span>
-                                        </div>
-                                        <div class="comments-box-reply">
-                                            <a href="#" class="nav-link text-muted">Reply</a>
-                                        </div>
-                                        
-                                    </div>
-                                    <p>
-                                        Congratulations Erin and Chris and your entire team!
-                                    </p>
-                                    <p>
-                                        An achievement well-earned and much deserved! Thank you for advocating for local flowers and local flower farms in the US and worldwide.
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="my-4  comments-boxs">
-                                    <div class="mb-3 d-flex justify-content-between align-items-center">
-                                        <div class="comments-box-header">
-                                            <h4 class="d-inline-block">Franklin Flower Farm</h4> <span class="text-muted">on April 20th 2020</span>
-                                        </div>
-                                        <div class="comments-box-reply">
-                                            <a href="#" class="nav-link text-muted">Reply</a>
-                                        </div>
-                                        
-                                    </div>
-                                    <p>
-                                        Congratulations Erin and Chris and your entire team!
-                                    </p>
-                                    <p>
-                                        An achievement well-earned and much deserved! Thank you for advocating for local flowers and local flower farms in the US and worldwide.
-                                    </p>
-                                </div>
-                                <hr>
+                                <?php
+                                    }
+                                }
+                                ?>
+                                
                                 <a href="#" class="showall">Show all comment</a>
                             </div>
-                            <form action="" method="get" enctype="multipart/form-data" class="mt-5">
+                            <form action="./phpEngine/blogcomment.php" method="get" enctype="multipart/form-data" class="mt-5">
                                 <h1 class="text-uppercase my-4">Leave a comment</h1>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 mb-3">
                                         <div class="form-group">
-                                            <input type="text" name="" id="name" class="form-control rounded-0 px-3 py-2" placeholder="Name">
+                                            <input type="text" name="name" id="name" class="form-control rounded-0 px-3 py-2" placeholder="Name">
                                         </div>
                                         
                                     </div>
                                     <div class="col-lg-6 col-md-12 mb-3">
                                         <div class="form-group">
-                                            <input type="email" name="" id="email" class="form-control rounded-0 px-3 py-2"  placeholder="Email">
+                                            <input type="email" name="email" id="email" class="form-control rounded-0 px-3 py-2"  placeholder="Email">
                                         </div>
                                     </div>
                                     <div class="col-12 mb-3">
@@ -289,7 +255,7 @@
                                         For security, use of Google’s reCAPTCHA service is required which is subject to the Google Privacy Policy and Terms of Use. <a href="#" class=""> I agree to these terms.</a>
                                     </p>
                                 </div>
-                                <button type="button" class="btn btn-dark rounded-0 text-light text-uppercase">post comment</button>
+                                <button type="submit" class="btn btn-dark rounded-0 text-light text-uppercase">post comment</button>
                             </form>
 
                         </div>
@@ -475,7 +441,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">My cart</a></li>
                                     <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Wishlist</a></li>
-                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        if (!isset($_SESSION["id"])){
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./login.php"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        }else {
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./phpEngine/logout.php"  class=" text-muted text-decoration-none">Log Out</a></li>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>

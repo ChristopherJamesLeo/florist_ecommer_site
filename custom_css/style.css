@@ -1429,3 +1429,27 @@
     color: var(--primary-global-white);
 }
 /* log in page end */
+
+/* cart alert  start*/
+.cart-alert {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: cartani 1s linear 0s 1 forwards;
+}
+.cart-alert.show {
+    display: block;
+}
+@keyframes cartani {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+}
+/* cart alert end */

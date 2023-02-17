@@ -144,6 +144,9 @@
     <!-- our flower section end -->
     <!-- footer section start -->
     <footer>
+        <!-- cart alert start -->
+        <div id="cart-alert" class="cart-alert alert alert-success">Succeesul you cart</div>
+        <!-- cart alert end -->
         <div class="footer-section-container">
             <div class="container">
                 <div class="row py-4 footer-header-container ">
@@ -178,7 +181,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">My cart</a></li>
                                     <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Wishlist</a></li>
-                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        if (!isset($_SESSION["id"])){
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./login.php"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        }else {
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./phpEngine/logout.php"  class=" text-muted text-decoration-none">Log Out</a></li>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -261,6 +276,16 @@ getAddCartBtns.forEach(function(getAddCartBtn){
     // console.log(getAddCartBtn);
     getAddCartBtn.addEventListener("click",function(e){
         // console.log(this.parentElement.querySelector(".price").textContent.trim());
+        
+       
+        
+        let getcartalert = document.getElementById("cart-alert");
+        
+        getcartalert.classList.add("show");
+        setTimeout(function(){
+            getcartalert.classList.remove("show")
+            
+        },1000)
         let getImgSrc = this.parentElement.previousElementSibling.querySelector("img").src ;
         let getProductName = this.parentElement.querySelector(".item-name").textContent.trim();
         let getPrice = this.parentElement.querySelector(".price").textContent.trim();
@@ -268,6 +293,7 @@ getAddCartBtns.forEach(function(getAddCartBtn){
         let productid = this.parentElement.parentElement.querySelector("input").value;
         // console.log(productid);
                 // console.log(getImgSrc,getProductName,getPrice);
+                
                 
                 if(localStorage.getItem("carts") === null){
                     cartArr = [];

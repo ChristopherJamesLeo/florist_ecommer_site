@@ -17,6 +17,8 @@ CREATE TABLE IF NOT EXISTS users(
     postcode CHAR(200) NOT NULL DEFAULT "Enter Your postcode"
 );
 
+
+
 CREATE TABLE IF NOT EXISTS products (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,

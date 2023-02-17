@@ -1,3 +1,11 @@
+<?php
+    include "./phpEngine/config.php";
+    session_start();
+
+    if(!isset($_SESSION["id"])){
+        header("location:http://localhost/florist_site(p-18)/login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,37 +104,48 @@
                             </div>
                             <div class="shipping-address-body">
                                 <form action="./phpEngine/editorder.php" method="get" enctype="multipart/form-data">
+                                    <?php
+                                    $userSql = "SELECT * FROM users WHERE id = {$_SESSION['id']}";
+                                    $userResult = mysqli_query( $conn , $userSql );
+                                    if(mysqli_num_rows($userResult) > 0){
+                                        while($userRow = mysqli_fetch_assoc($userResult)){
+                                    ?>
                                     <div class="form-group mb-3">
                                         <label for="firstname" class="mb-2">First name</label>
-                                        <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3">
+                                        <input type="text" name="firstname" id="firstname" class="form-control rounded-0 py-2 px-3" value = "<?php echo $userRow['firstname']?>">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="lastname" class="mb-2">Last name</label>
-                                        <input type="text" name="lastname" id="lastname" class="form-control rounded-0 py-2 px-3">
+                                        <input type="text" name="lastname" id="lastname" class="form-control rounded-0 py-2 px-3"  value = "<?php echo $userRow['lastname']?>">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="contact" class="mb-2">Contact</label>
-                                        <input type="text" name="contact" id="contact" class="form-control rounded-0 py-2 px-3">
+                                        <input type="text" name="contact" id="contact" class="form-control rounded-0 py-2 px-3"  value = "<?php echo $userRow['phonenumber']?>">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="address" class="mb-2">Address</label>
-                                        <input type="text" name="str-address" id="str-address" class="form-control rounded-0 py-2 px-3 mb-2" placeholder="Steet Address">
-                                        <input type="text" name="apart-address" id="apart-address" class="form-control rounded-0 py-2 px-3" placeholder="Apartment,suite,unite ect (optional)">
+                                        <input type="text" name="str-address" id="str-address" class="form-control rounded-0 py-2 px-3 mb-2" placeholder="Steet Address"  value = "<?php echo $userRow['address1']?>">
+                                        <input type="text" name="apart-address" id="apart-address" class="form-control rounded-0 py-2 px-3" placeholder="Apartment,suite,unite ect (optional)" value = "<?php echo $userRow['address2']?>">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="town" class="mb-2">Country/State</label>
-                                        <input type="text" name="town" id="town" class="form-control rounded-0 py-2 px-3">
+                                        <input type="text" name="town" id="town" class="form-control rounded-0 py-2 px-3" value = "<?php echo $userRow['country']?>">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="postcode" class="mb-2">Postcode/Zip</label>
-                                        <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3">
+                                        <input type="text" name="postcode" id="postcode" class="form-control rounded-0 py-2 px-3" value = "<?php echo $userRow['postcode']?>">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="odernote" class="mb-2">Order note</label>
                                         <input type="text" name="odernote" id="odernote" class="form-control rounded-0 py-2 px-3" placeholder="Note about your order, e.g, special noe for delivery"> 
                                     </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                    
                                     <div class="form-group my-3">
-                                        <input type="checkbox" name="keep" id="keep" class="form-check-input me-2">
+                                        <input type="checkbox" name="keep" id="keep" class="form-check-input me-2" required>
                                         <label for="keep">Keep me up to dateon news and exclusive offers</label>
                                     </div>
                                 
@@ -176,8 +195,10 @@
                                     <input type="radio" name="paymethod"  id="paypal" class=" me-2" value="paypal">
                                     <label for="paypal">PayPal</label>
                                 </div>
+                                <div class="d-grid">
+                                    <button type="radio" id="submitbtn" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to Order</a>
+                                </div>
                                 
-                                <button type="radio" id="submitbtn" class="btn btn-dark rounded-0 fw-bold d-block py-3 text-light text-uppercase">Proceed to Order</a>
                             </form>
                             
                         </div>
@@ -263,7 +284,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">My cart</a></li>
                                     <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Wishlist</a></li>
-                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        if (!isset($_SESSION["id"])){
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./login.php"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        }else {
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./phpEngine/logout.php"  class=" text-muted text-decoration-none">Log Out</a></li>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>

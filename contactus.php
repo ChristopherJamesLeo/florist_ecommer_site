@@ -1,3 +1,7 @@
+<?php
+    include "./phpEngine/config.php";
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,7 +101,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 p-3 mb-3">
                         <div class="contact-us-box-container">
                             <h1>Contact Us</h1>
-                            <form action="" method="get">
+                            <form action="./phpEngine/addcontactus.php" method="get">
                                 <input type="email" name="email" id="conact-email" class="border rounded-0 mb-3  contact-email" placeholder="Email">
                                 <textarea name="contact-message" id="contact-message" class="border rounded-0 mb-3" placeholder="Message"></textarea>
                                 <button type="submit" class="text-uppercase fw-bold">send</button>
@@ -188,7 +192,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">My cart</a></li>
                                     <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Wishlist</a></li>
-                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        if (!isset($_SESSION["id"])){
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./login.php"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        }else {
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./phpEngine/logout.php"  class=" text-muted text-decoration-none">Log Out</a></li>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>

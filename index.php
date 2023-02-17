@@ -2,7 +2,6 @@
     include "./phpEngine/config.php";
 
     session_start();
-    // echo $_SESSION["email"];
     
 ?>
 
@@ -512,6 +511,9 @@
     <!-- footer section start -->
     <footer>
     <!-- Elf sight start -->
+    <!-- cart alert start -->
+    <div id="cart-alert" class="cart-alert alert alert-success">Succeesul you cart</div>
+     <!-- cart alert end -->
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-d4e9d066-35a6-4c00-99a7-67010896b3db"></div>
     <!-- Elf sight End -->
@@ -626,11 +628,19 @@ let getHeader = document.querySelector(".header");
             // console.log(getAddCartBtn);
             getAddCartBtn.addEventListener("click",function(e){
                 // console.log(this.parentElement.querySelector(".price").textContent.trim());
+                let getcartalert = document.getElementById("cart-alert");
+        
+                getcartalert.classList.add("show");
+                setTimeout(function(){
+                    getcartalert.classList.remove("show")
+                    console.log("done");
+                },1000)
                 let getImgSrc = this.parentElement.previousElementSibling.querySelector("img").src ;
                 let getProductName = this.parentElement.querySelector(".item-name").textContent.trim();
                 let getPrice = this.parentElement.querySelector(".price").textContent.trim();
                 let productid = this.parentElement.parentElement.querySelector("input").value;
-                let useriddb = <?php echo $_SESSION["id"] ?>;
+                let useriddb = <?php echo $_SESSION["id"];?>
+                
                 // console.log(getImgSrc,getProductName,getPrice);
                 
                 if(localStorage.getItem("carts") === null){

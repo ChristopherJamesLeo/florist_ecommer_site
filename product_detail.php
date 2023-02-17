@@ -82,54 +82,88 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 p-2">
-                        <div class="row">
-                            <div class="col-lg-9 col-md-12 main-product-img-container">
-                                <img src="./assets/imgs/products/product-details-1.jpg.webp" id="main-product-img" class="main-product-img" alt="product-details-1">
-                            </div>
-                            <div class="col-lg-3 col-md-12 slide-product-img-container">
-                                <div class="slide-product-img">
-                                    <img src="./assets/imgs/products/thumb-1.jpg.webp" show-img="0" alt="thumb-1">
+                        <form action="<?php $_SERVER["PHP_SELF"] ?>">
+                            <?php
+                                if(isset($_REQUEST["id"] )){
+                                    $pid = $_REQUEST["id"] ;
+                                }else {
+                                    $pid = 1;
+                                }
+                                // $pid = $_REQUEST["id"] ;
+                                $shosql = "SELECT * FROM products WHERE id = {$pid}";
+                                $shoresult = mysqli_query( $conn , $shosql );
+                                if(mysqli_num_rows($shoresult) >0){
+                                    while($shorow = mysqli_fetch_assoc($shoresult)){
+                                        ?>
+                            <div class="row">
+                                <div class="col-lg-9 col-md-12 main-product-img-container">
+                                    <img src="./assets/imgs/products/<?php  echo $shorow["product_img1"] ?>" id="main-product-img" class="main-product-img" alt="product-details-1">
                                 </div>
-                                <div class="slide-product-img">
-                                    <img src="./assets/imgs/products/thumb-2.jpg.webp" show-img="1" alt="thumb-2">
+                                <div class="col-lg-3 col-md-12 slide-product-img-container">
+                                    <div class="slide-product-img">
+                                        <img src="./assets/imgs/products/thumb-1.jpg.webp" show-img="0" alt="thumb-1">
+                                    </div>
+                                    <div class="slide-product-img">
+                                        <img src="./assets/imgs/products/thumb-2.jpg.webp" show-img="1" alt="thumb-2">
+                                    </div>
+                                    <div class="slide-product-img">
+                                        <img src="./assets/imgs/products/thumb-3.jpg.webp" show-img="2" alt="thumb-3">
+                                    </div>
+                                    <div class="slide-product-img">
+                                        <img src="./assets/imgs/products/thumb-4.jpg.webp" show-img="3" alt="thumb-4">
+                                    </div>
+                                    <div class="slide-product-img">
+                                        <img src="./assets/imgs/products/thumb-5.jpg.webp" show-img="4" alt="thumb-5">
+                                    </div>
+                                    <div class="slide-product-img">
+                                        <img src="./assets/imgs/products/thumb-6.jpg.webp" show-img="5" alt="thumb-6">
+                                    </div>
                                 </div>
-                                <div class="slide-product-img">
-                                    <img src="./assets/imgs/products/thumb-3.jpg.webp" show-img="2" alt="thumb-3">
-                                </div>
-                                <div class="slide-product-img">
-                                    <img src="./assets/imgs/products/thumb-4.jpg.webp" show-img="3" alt="thumb-4">
-                                </div>
-                                <div class="slide-product-img">
-                                    <img src="./assets/imgs/products/thumb-5.jpg.webp" show-img="4" alt="thumb-5">
-                                </div>
-                                <div class="slide-product-img">
-                                    <img src="./assets/imgs/products/thumb-6.jpg.webp" show-img="5" alt="thumb-6">
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            let getMainImg = document.getElementById("main-product-img");
-                            let getSlideImgs = document.querySelectorAll(".slide-product-img img");
-                            let productImgs = ["product-details-2.jpg.webp","product-details-3.jpg.webp","product-details-4.jpg.webp","product-details-5.jpg.webp","product-details-6.jpg.webp","product-details-1.jpg.webp"];
+                            </div
+                                        <?php
+                                    }
+                                }
+                            ?>
+                            >
+                            <script>
+                                let getMainImg = document.getElementById("main-product-img");
+                                let getSlideImgs = document.querySelectorAll(".slide-product-img img");
+                                let productImgs = ["product-details-2.jpg.webp","product-details-3.jpg.webp","product-details-4.jpg.webp","product-details-5.jpg.webp","product-details-6.jpg.webp","product-details-1.jpg.webp"];
 
-                            getSlideImgs.forEach(function(getSlideImg){
-                                getSlideImg.addEventListener("click",function(){
-                                    // console.log(this.getAttribute("show-img"));
-                                    getMainImg.src = `./assets/imgs/products/`+ productImgs[this.getAttribute("show-img")];
+                                getSlideImgs.forEach(function(getSlideImg){
+                                    getSlideImg.addEventListener("click",function(){
+                                        // console.log(this.getAttribute("show-img"));
+                                        getMainImg.src = `./assets/imgs/products/`+ productImgs[this.getAttribute("show-img")];
+                                    })
                                 })
-                            })
-                        </script>
+                            </script>
+                        </form>
+                        
                     </div>
                     <div class="col-lg-6 col-md-12 p-2 product-detail-form-container">
                         <form action="" method="get" enctype="multipart/form-data">
+                            <?php 
+                                if(isset($_REQUEST["id"] )){
+                                    $formpid = $_REQUEST["id"] ;
+                                }else {
+                                    $formpid = 1;
+                                }
+                                
+                                $formsql = "SELECT * FROM products WHERE id = {$formpid}";
+                                $formresult = mysqli_query( $conn , $formsql );
+                                if(mysqli_num_rows($formresult) > 0){
+                                    
+                                    while($formrow = mysqli_fetch_assoc($formresult)){
+                                        
+                            ?>
                             <div class="mb-5 form-header">
                                 <div class="d-flex justify-content-between align-items-center product-detail-form-header">
                                     <div class="product-detail-header">
                                         <span class="text-uppercase">Succulent</span><br>
-                                        <h1>Fly Me To The Moon</h1>
+                                        <h1><?php echo $formrow["name"]; ?></h1>
                                     </div>
                                     <div class="product-detail-price">
-                                        <span>$34.00</span>
+                                        <span>$<?php echo $formrow["price"]; ?>.00</span>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center product-rating-container ">
@@ -168,7 +202,7 @@
                                 <div class="product-detail-para-container">
                                     <div class="show-para description">
                                         <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque numquam cumque dicta, qui ab harum voluptas quos expedita ipsum praesentium culpa perferendis ipsam hic maxime, accusamus, minus odio et?
+                                        <?php echo $formrow["description"]; ?>
                                         </p>
                                     </div>
                                     <div class="show-para shipping-return">
@@ -185,6 +219,12 @@
 
                                 </div>
                             </div>
+                            <?php
+                                    }
+                                }
+                                
+                            ?>
+
 
                             
 
@@ -218,7 +258,10 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 p-2 our-flower-item-container <?php echo $prow["categories"]; ?>">
                             <input type="hidden" name ="p-id" value = "<?php echo $prow['id'] ;?>">
                             <div class="our-flower-item-img-container">
-                                <img src="./assets/imgs/products/<?php echo $prow["product_img1"] ;?>" alt="<?php echo $prow["product_img1"]; ?>">
+                                <a href="./product_detail.php?id=<?php echo $prow['id'] ;?>">
+                                    <img src="./assets/imgs/products/<?php echo $prow["product_img1"] ;?>" alt="<?php echo $prow["product_img1"]; ?>">
+                                </a>
+                                
                                 <div class="d-flex justify-content-center align-items-center our-flower-item-icons-container">
                                     <a href="#" class="our-flower-item-icon"><ion-icon name="search-outline"></ion-icon></a>
                                     <a href="#" class="our-flower-item-icon"><ion-icon name="heart-outline"></ion-icon></a>
@@ -290,6 +333,9 @@
     <!-- follow us section end -->
     <!-- footer section start -->
     <footer>
+        <!-- cart alert start -->
+        <div id="cart-alert" class="cart-alert alert alert-success">Succeesul you cart</div>
+        <!-- cart alert end -->
         <div class="footer-section-container">
             <div class="container">
                 <div class="row py-4 footer-header-container ">
@@ -324,7 +370,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item border-0"><a href="#" class=" text-muted text-decoration-none">My cart</a></li>
                                     <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Wishlist</a></li>
-                                    <li class="list-group-item border-0"><a href="#"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        if (!isset($_SESSION["id"])){
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./login.php"  class=" text-muted text-decoration-none">Login/Register</a></li>
+                                    <?php
+                                        }else {
+                                    ?>
+                                            <li class="list-group-item border-0"><a href="./phpEngine/logout.php"  class=" text-muted text-decoration-none">Log Out</a></li>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -425,6 +483,13 @@ getAddCartBtns.forEach(function(getAddCartBtn){
     // console.log(getAddCartBtn);
     getAddCartBtn.addEventListener("click",function(e){
         // console.log(this.parentElement.querySelector(".price").textContent.trim());
+        let getcartalert = document.getElementById("cart-alert");
+        
+        getcartalert.classList.add("show");
+        setTimeout(function(){
+            getcartalert.classList.remove("show")
+            console.log("done");
+        },1000)
         let getImgSrc = this.parentElement.previousElementSibling.querySelector("img").src ;
         let getProductName = this.parentElement.querySelector(".item-name").textContent.trim();
         let getPrice = this.parentElement.querySelector(".price").textContent.trim();
