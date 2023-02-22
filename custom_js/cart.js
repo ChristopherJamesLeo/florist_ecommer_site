@@ -18,8 +18,11 @@ if(getCarts != null){
 }
 // console.log(cartAmount);
 // console.log(getCarts.length)
-let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
-getShowCartAmount.innerHTML = cartIcons;
+if(getCarts != null){
+    let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
+    getShowCartAmount.innerHTML = cartIcons;
+}
+
 
 
             // let getCarts = JSON.parse(localStorage.getItem("carts"));
@@ -67,6 +70,7 @@ getShowCartAmount.innerHTML = cartIcons;
                 getClearCartBtn.addEventListener("click",function(){
                     localStorage.removeItem("carts");
                     getCartBody.innerHTML = " ";
+                    getCartList.innerHTML = " ";
 
                 })
             let getDeleteCartEachItems = document.querySelectorAll(".deleteCart");

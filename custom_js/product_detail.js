@@ -8,6 +8,16 @@ window.onscroll = function(){
         getHeader.classList.remove("header-ani");
     }
 }
+let getMainImg = document.getElementById("main-product-img");
+let getSlideImgs = document.querySelectorAll(".slide-product-img img");
+let productImgs = ["product-details-2.jpg.webp","product-details-3.jpg.webp","product-details-4.jpg.webp","product-details-5.jpg.webp","product-details-6.jpg.webp","product-details-1.jpg.webp"];
+
+getSlideImgs.forEach(function(getSlideImg){
+    getSlideImg.addEventListener("click",function(){
+        // console.log(this.getAttribute("show-img"));
+        getMainImg.src = `./assets/imgs/products/`+ productImgs[this.getAttribute("show-img")];
+    })
+})
 let getCarts = JSON.parse(localStorage.getItem("carts"));
 let getShowCartAmount = document.getElementById("show-cart-amount");
 let cartAmount = 0
@@ -48,6 +58,14 @@ getAddCartBtns.forEach(function(getAddCartBtn){
     // console.log(getAddCartBtn);
     getAddCartBtn.addEventListener("click",function(e){
         // console.log(this.parentElement.querySelector(".price").textContent.trim());
+        let getcartalert = document.getElementById("cart-alert");
+        getcartalert.classList.add("show");
+        this.style.display = "none";
+        setTimeout(function(){
+            getcartalert.classList.remove("show");
+            // console.log(e.target);
+            e.target.style.display = "block";
+        },1000)
         let getImgSrc = this.parentElement.previousElementSibling.querySelector("img").src ;
         let getProductName = this.parentElement.querySelector(".item-name").textContent.trim();
         let getPrice = this.parentElement.querySelector(".price").textContent.trim();

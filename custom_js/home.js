@@ -1,16 +1,5 @@
-let getCarts = JSON.parse(localStorage.getItem("carts"));
-let getShowCartAmount = document.getElementById("show-cart-amount");
-let cartAmount = 0
-if(getCarts != null){
-    getCarts.forEach(function(getCart){
-        let getPrice = +getCart.price; // to changet number datatype
-        cartAmount += getPrice;
-    })
-}
-console.log(cartAmount);
-console.log(getCarts.length)
-let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
-getShowCartAmount.innerHTML = cartIcons;
+
+
 
 let getHeader = document.querySelector(".header");
         window.onscroll = function(){
@@ -28,6 +17,14 @@ let getHeader = document.querySelector(".header");
             // console.log(getAddCartBtn);
             getAddCartBtn.addEventListener("click",function(e){
                 // console.log(this.parentElement.querySelector(".price").textContent.trim());
+                let getcartalert = document.getElementById("cart-alert");
+                getcartalert.classList.add("show");
+                this.style.display = "none";
+                setTimeout(function(){
+                    getcartalert.classList.remove("show");
+                    // console.log(e.target);
+                    e.target.style.display = "block";
+                },1000)
                 let getImgSrc = this.parentElement.previousElementSibling.querySelector("img").src ;
                 let getProductName = this.parentElement.querySelector(".item-name").textContent.trim();
                 let getPrice = this.parentElement.querySelector(".price").textContent.trim();
@@ -52,7 +49,23 @@ let getHeader = document.querySelector(".header");
             })
         });
 
-        
+let getCarts = JSON.parse(localStorage.getItem("carts"));
+let getShowCartAmount = document.getElementById("show-cart-amount");
+let cartAmount = 0
+if(getCarts != null){
+    getCarts.forEach(function(getCart){
+        let getPrice = +getCart.price; // to changet number datatype
+        cartAmount += getPrice;
+    })
+}
+// console.log(cartAmount);
+// console.log(getCarts.length)
+console.log(getCarts);
+if(getCarts != null) {
+    let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
+    getShowCartAmount.innerHTML = cartIcons;
+}
+
 
         $(document).ready(function(){
             $(".owl-carousel").owlCarousel({

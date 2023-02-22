@@ -19,8 +19,11 @@ if(getCarts != null){
 }
 // console.log(cartAmount);
 // console.log(getCarts.length)
-let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
-getShowCartAmount.innerHTML = cartIcons;
+if(getCarts != null){
+    let cartIcons = `<ion-icon name="bag-handle-outline"></ion-icon><span class="nav-remark">(${getCarts.length < 10 ? "0"+getCarts.length : getCarts.length})<span class="nav-remark-price">$${cartAmount}.0</span></span>`
+    getShowCartAmount.innerHTML = cartIcons;
+}
+
 
 let getAddCartBtns = document.querySelectorAll(".item-add-to-cart");
 // console.log(getAddCartBtns);
@@ -29,6 +32,16 @@ getAddCartBtns.forEach(function(getAddCartBtn){
     // console.log(getAddCartBtn);
     getAddCartBtn.addEventListener("click",function(e){
         // console.log(this.parentElement.querySelector(".price").textContent.trim());
+        let getcartalert = document.getElementById("cart-alert");
+        
+        getcartalert.classList.add("show");
+        // console.log(this);
+        this.style.display = "none";
+        setTimeout(function(){
+            getcartalert.classList.remove("show");
+            // console.log(e.target);
+            e.target.style.display = "block";
+        },1000)
         let getImgSrc = this.parentElement.previousElementSibling.querySelector("img").src ;
         let getProductName = this.parentElement.querySelector(".item-name").textContent.trim();
         let getPrice = this.parentElement.querySelector(".price").textContent.trim();
@@ -49,7 +62,7 @@ getAddCartBtns.forEach(function(getAddCartBtn){
         })
         localStorage.setItem("carts" , JSON.stringify(cartArr));
 
-        console.log(cartArr);
+        // console.log(cartArr);
     })
 });
 let getCart = JSON.parse(localStorage.getItem("carts"));
